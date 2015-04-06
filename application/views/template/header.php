@@ -8,12 +8,12 @@
     <title><?php echo $title;?></title>
 
     <!-- Bootstrap -->
-    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo base_url("assets/css/bootstrap.min.css");?>" rel="stylesheet">
 
     <!--jQuery-->
 
-    <link rel="stylesheet" type="text/css" href="../assets/jquery-ui-1.11.4/jquery-ui.css"/>
-    <script src="../assets/jquery-ui-1.11.4/jquery-ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/jquery-ui-1.11.4/jquery-ui.css");?>"/>
+    <script src="<?php echo base_url("assets/jquery-ui-1.11.4/jquery-ui.js");?>"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -26,7 +26,7 @@
   <div id="#page-wrap" style="margin: auto;height: auto;min-height:100%;">
 <section style="height:100%; width:100%;">
 <div style="background-color:#013;" align="center">
-<img src="../assets/img/sida.jpg"  alt="logo" width="241" height="62"  />
+<img src="<?php echo base_url("assets/img/sida.jpg");?>"  alt="logo" width="241" height="62"  />
 </div>
 <div>
 <table height="7%"  style=" height:5%; width:100%; border: solid #013;">

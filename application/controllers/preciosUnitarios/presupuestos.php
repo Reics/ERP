@@ -1,6 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Home extends CI_Controller {
+class Presupuestos extends CI_Controller {
+
 
 	       public function __construct() 
         { 
@@ -18,7 +19,7 @@ class Home extends CI_Controller {
 		$this->load->view('template/header', $data);
 
 		/*carga el contenido de la pagina*/
-		$this->load->view('home');
+		$this->load->view('preciosUnitarios/presupuestos');
 
 		/*Se cierra el body y el html, y se agregan los js de bootstrap*/
 		$this->load->view('template/footer');
