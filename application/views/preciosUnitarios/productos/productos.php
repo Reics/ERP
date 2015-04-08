@@ -26,26 +26,22 @@ and open the template in the editor.
     </thead>
     <tbody>        
         
-        <?php if ($preciounitario != NULL) {
-            foreach ($preciounitario as $p): ?>
                 <tr>
-                    <td><?php echo $p['id']; ?></td>
-                    <td><?php echo $p['Nombre']; ?></td>
-                    <td><?php echo $p['Unidad']; ?></td>
+                    <td>id</td>
+                    <td>Nombre</td>
+                    <td>Unidad</td>
                     <td>
-                        <a type="button" class="btn btn-default" aria-label="Left Align" href="<?=site_url()?>/preguntas/set_form/<?=$p['idencuesta']?>">
+                        <a type="button" class="btn btn-default" aria-label="Left Align">
                             <span class='glyphicon glyphicon-plus' aria-hidden='true'></span>
                         </a>
-                        <a type="button" class="btn btn-default" aria-label="Left Align" href="<?=site_url()?>/encuestas/update_form/<?=$p['idencuesta']?>">
+                        <a type="button" class="btn btn-default" aria-label="Left Align">
                             <span class='glyphicon glyphicon-edit' aria-hidden='true'></span>
                         </a>
-                        <a type="button" class="btn btn-default" aria-label="Left Align" href="<?=site_url()?>/encuestas/delete/<?=$p['idencuesta']?>">
+                        <a type="button" class="btn btn-default" aria-label="Left Align">
                             <span class='glyphicon glyphicon-remove' aria-hidden='true'></span>
                         </a>
                     </td>
                 </tr>
-        <?php endforeach;  
-        } ?>
         
     </tbody>
 </table>
@@ -53,7 +49,7 @@ and open the template in the editor.
 <hr> <!-- Botones -->
 <div align="right">
     <button type="button" class="btn btn-danger">Salir</button>
-    <a type="button" class="btn btn-primary" href="<?= site_url() ?>/encuestas/set_form">Agregar Producto</a>
+    <a type="button" class="btn btn-primary">Agregar Producto</a>
 </div>
     </body>
 </html>

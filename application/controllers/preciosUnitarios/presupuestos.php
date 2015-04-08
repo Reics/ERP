@@ -13,7 +13,7 @@ class Presupuestos extends CI_Controller {
 	public function index()
 	{
 
-		$data['title'] = 'Home';//se inicializa el titulo de la pagina
+		$data['title'] = 'presupuestos';//se inicializa el titulo de la pagina
 
 		/*Habre el html y el body, y carga el header junto con el css de bootstrap*/
 		$this->load->view('template/header', $data);
