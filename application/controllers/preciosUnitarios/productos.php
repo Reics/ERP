@@ -37,4 +37,18 @@ class Productos extends CI_Controller {
 		/*Se cierra el body y el html, y se agregan los js de bootstrap*/
 		$this->load->view('template/footer');
 	}
-}
+
+	public function editar()
+	{
+		$data['title'] = 'Editar Productos';//se inicializa el titulo de la pagina
+
+		/*Habre el html y el body, y carga el header junto con el css de bootstrap*/
+		$this->load->view('template/header', $data);
+
+		/*carga el contenido de la pagina*/
+		$this->load->view('preciosUnitarios/productos/editarProducto');
+
+		/*Se cierra el body y el html, y se agregan los js de bootstrap*/
+		$this->load->view('template/footer');
+	}
+}	
