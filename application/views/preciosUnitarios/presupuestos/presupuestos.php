@@ -18,7 +18,7 @@
                     <td>fecha</td>
                     <td>
                         <a type="button" class="btn btn-default" aria-label="Left Align">
-                            <span class='glyphicon glyphicon-plus' aria-hidden='true'></span>
+                            <span class='glyphicon glyphicon-list' aria-hidden='true'></span>
                         </a>
                         <a type="button" class="btn btn-default" aria-label="Left Align">
                             <span class='glyphicon glyphicon-edit' aria-hidden='true'></span>
