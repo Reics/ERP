@@ -12,7 +12,7 @@ class Productos extends CI_Controller {
 
 	public function index()
 	{
-		$data['title'] = 'Productos';//se inicializa el titulo de la pagina
+		$data['header'] = array('title' => 'Productos' , 'proveedores' => '' , 'presupuestos' => 'active' , 'profecionistas' => '' );//se inicializa el titulo de la pagina
 
 		/*Habre el html y el body, y carga el header junto con el css de bootstrap*/
 		$this->load->view('template/header', $data);
@@ -26,7 +26,7 @@ class Productos extends CI_Controller {
 
 	public function agregar()
 	{
-		$data['title'] = 'Agregar Productos';//se inicializa el titulo de la pagina
+		$data['header'] = array('title' => 'Agregar Productos' , 'proveedores' => '' , 'presupuestos' => 'active' , 'profecionistas' => '' );//se inicializa el titulo de la pagina
 
 		/*Habre el html y el body, y carga el header junto con el css de bootstrap*/
 		$this->load->view('template/header', $data);
@@ -40,7 +40,7 @@ class Productos extends CI_Controller {
 
 	public function editar()
 	{
-		$data['title'] = 'Editar Productos';//se inicializa el titulo de la pagina
+		$data['header'] = array('title' => 'Editar Productos' , 'proveedores' => '' , 'presupuestos' => 'active' , 'profecionistas' => '' );//se inicializa el titulo de la pagina
 
 		/*Habre el html y el body, y carga el header junto con el css de bootstrap*/
 		$this->load->view('template/header', $data);
