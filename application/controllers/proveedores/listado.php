@@ -32,7 +32,7 @@ class Listado extends CI_Controller {
 		$this->load->view('template/header', $data);
 
 		/*carga el contenido de la pagina*/
-		$this->load->view('proveedores/datos');
+		$this->load->view('proveedores/tab');
 
 		/*Se cierra el body y el html, y se agregan los js de bootstrap*/
 		$this->load->view('template/footer');
