@@ -1,5 +1,4 @@
-
-    <section>
+<section>
         <div class="container">
 
 <h2 align="center">Listado de Proovedores</h2><hr>
@@ -38,16 +37,16 @@
     </thead>
     <tbody>
         <tr>
-            <td>Proovedor 1</td>
+            <td><a href="<?php echo site_url("proveedores/listado/datos");?>">Proovedor 1</a></td>
             <td>Estados Unidos</td>
             <td>1</td>
             <td>Cemento y Arena</td>
             <td>05/03/2015</td>
             <td>
-                <a type='button' class='btn btn-default' aria-label='Left Align'>
+                <a type='button' class='btn btn-default' aria-label='Left Align' href="<?php echo site_url("proveedores/listado/contacto");?>">
                     <span class='glyphicon glyphicon-edit' aria-hidden='true'></span>
                 </a>
-                <a type='button' class='btn btn-default' aria-label='Left Align'>
+                <a type='button' class='btn btn-default' aria-label='Left Align' href="<?php echo site_url("proveedores/listado/contacto");?>">
                     <span class='glyphicon glyphicon-remove' aria-hidden='true'></span>
                 </a>
             </td>
