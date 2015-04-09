@@ -1,66 +1,71 @@
 
-    <section>
-        <div class="container">
-            <h1 align="center">Contactos</h1><hr>
-        <table class="table table-striped display" id="dataTable"> <!-- Tabla de competencias -->
-
-    <thead>
-        <tr>
-            <th>Nombre</th>
-            <th>Código de Proovedor</th>
-            <th>Categoría Materiales</th>
-            <th>Teléfono</th>
-            <th>Sitio web</th>
-            <th>Email</th>
-        </tr>   
-    </thead>
-    <tbody>
-        <tr>
-            <td>Contacto 1</td>
-            <td>1</td>
-            <td>Cemento y Arena</td>
-            <td>495 109 3348 <br> 495 109 4597</td>
-            <td>www.facebook.com</td>
-            <td>miguel-alejandro-eudave-landeros@hotmail.com</td>
-            <td>
-                <a type='button' class='btn btn-default' aria-label='Left Align' href="<?php echo site_url("proveedores/listado/contacto");?>">
-                    <span class='glyphicon glyphicon-edit' aria-hidden='true'></span>
-                </a>
-                <a type='button' class='btn btn-default' aria-label='Left Align'>
-                    <span class='glyphicon glyphicon-remove' aria-hidden='true'></span>
-                </a>
-            </td>
-        </tr>
-    </tbody>
-    <tbody>
-        <tr>
-            <td>Contacto 2</td>
-            <td>2</td>
-            <td>Varillas y Herramientos</td>
-            <td>495 109 3348 <br> 495 109 4597 <br> 495 019 1884</td>
-            <td>www.taringa.com</td>
-            <td>barca_108_@hotmail.com</td>
-            <td>
-                <a type='button' class='btn btn-default' aria-label='Left Align' href="<?php echo site_url("proveedores/listado/contacto");?>">
-                    <span class='glyphicon glyphicon-edit' aria-hidden='true'></span>
-                </a>
-                <a type='button' class='btn btn-default' aria-label='Left Align'>
-                    <span class='glyphicon glyphicon-remove' aria-hidden='true'></span>
-                </a>
-            </td>
-        </tr>
-    </tbody>
-</table>
-                </div>
-
-                <div class="container">
-                <hr>
-    <div align="right">
-        <a type="button" class="btn btn-danger" >Cancelar</a>
-        <a type='button' class='btn btn-primary' aria-label='Left Align' href="<?php echo site_url("proveedores/listado/contacto");?>">
-      Agregar Contacto
-   </a>
-        
+    <section style="margin-left: 50px; margin-right: 50px;">
+<div class="col-sm-offset-1">
+<div class="form-group">
+<br>
+<blockquote>
+  <p>Contacto</p>
+</blockquote>
+<form class="form-inline">
+  <div class="form-group">
+    <label for="ncontacto" style="
+    margin-bottom: 25px;
+">Nombre del Contacto: </label>
+    <input type="text" class="form-control" id="ncontacto">
+  </div>
+  </form>
+  <form class="form-inline">
+  <div class="form-group">
+    <label for="ccontacto" style="
+    margin-left: 6px;
+    margin-bottom: 25px;
+">Codigo del Contacto: </label>
+    <input type="text" class="form-control" id="ccontacto">
+  </div>
+  </form>
+  <form class="form-inline">
+  <div class="form-group">
+    <label for="direccion" style="
+    margin-left: 80px;
+    margin-bottom: 25px;
+">Direccion: </label>
+    <input type="text" class="form-control" id="direccion">
+  </div>
+  </form>
+   <form class="form-inline">
+  <div class="form-group">
+    <label for="rfc" style="
+    margin-left: 115px;
+    margin-bottom: 25px;
+">RFC: </label>
+    <input type="text" class="form-control" id="rfc">
     </div>
-    </div>
+    <div class="form-group"> <label for:"estados"="" style="
+    margin-left: 10px;
+">Provincia: </label>
+<select class="form-control" name="estados">
+</select>
+  </div>
+  </form>
+    <form class="form-inline">
+  <div class="form-group">
+    <label for="telefono" style="
+    margin-left: 90px;
+    margin-bottom: 25px;
+">Telefono: </label>
+    <input type="text" class="form-control" id="telefono">
+  </div>
+    <div class="form-group">
+    <label for="email" style="
+    margin-left: 30px;
+">Email: </label>
+    <input type="text" class="form-control" id="email">
+  </div>
+  </form>
+  <div class="col-sm-offset-8 col-sm-10">
+<button type="submit" class="btn btn-success">Guardar</button>
+<button type="submit" class="btn btn-danger">Cancelar</button>
+</div>
+</div>
+</div>
     </section>
