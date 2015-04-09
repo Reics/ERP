@@ -12,7 +12,7 @@ class Listado extends CI_Controller {
 
 	public function index()
 	{
-		$data['header'] = array('title' => 'Listado de Proveedores' , 'proveedores' => 'active' , 'presupuestos' => '' , 'profecionistas' => '' );//se inicializa el titulo de la pagina
+		$data['header'] = array('title' => 'Listado' , 'proveedores' => 'active' , 'presupuestos' => '' , 'profecionistas' => '' );//se inicializa el titulo de la pagina
 
 		/*Habre el html y el body, y carga el header junto con el css de bootstrap*/
 		$this->load->view('template/header', $data);
@@ -26,7 +26,7 @@ class Listado extends CI_Controller {
 
 	public function datos()
 	{
-		$data['title'] = 'Listado de proveedores';//se inicializa el titulo de la pagina
+		$data['header'] = array('title' => 'Listado' , 'proveedores' => 'active' , 'presupuestos' => '' , 'profecionistas' => '' );//se inicializa el titulo de la pagina
 
 		/*Habre el html y el body, y carga el header junto con el css de bootstrap*/
 		$this->load->view('template/header', $data);
@@ -40,7 +40,7 @@ class Listado extends CI_Controller {
 
 	public function contacto()
 	{
-		$data['title'] = 'Listado de proveedores';//se inicializa el titulo de la pagina
+		$data['header'] = array('title' => 'Listado' , 'proveedores' => 'active' , 'presupuestos' => '' , 'profecionistas' => '' );//se inicializa el titulo de la pagina
 
 		/*Habre el html y el body, y carga el header junto con el css de bootstrap*/
 		$this->load->view('template/header', $data);

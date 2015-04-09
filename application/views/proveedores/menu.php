@@ -10,7 +10,7 @@
       <tr>
         <td align="center" width="200" height="150"><p align="center"><a href="<?php echo site_url("proveedores/listado");?>"><img src="<?php echo base_url("assets/img/proveedores/1.jpg");?>" width="200" height="150"  alt=""/></a></p></td>
         <td align="center" width="200" height="150"><p align="center"><a href="<?php echo site_url("proveedores/contacto");?>"><img src="<?php echo base_url("assets/img/proveedores/2.jpg");?>" width="200" height="150"  alt=""/></a></p></td>
-        <td align="center" width="200" height="150"><p align="center"><a href="<?php echo site_url("proveedores/categoria");?>"><img src="<?php echo base_url("assets/img/proveedores/3.jpg");?>" width="200" height="150""  alt=""/></a></p></td>
+        <td align="center" width="200" height="150"><p align="center"><a href="<?php echo site_url("proveedores/categoria");?>"><img src="<?php echo base_url("assets/img/proveedores/3.jpg");?>" width="200" height="150"  alt=""/></a></p></td>
       </tr>
       <tr>
         <th> <h4 align="center">Listado de proveedores</h4></th>
