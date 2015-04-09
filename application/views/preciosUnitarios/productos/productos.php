@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
-        
+<section>       
         <h2>Productos</h2><hr>
         
 
@@ -29,12 +17,10 @@ and open the template in the editor.
                 <tr>
                     <td>id</td>
                     <td>Nombre</td>
+                    <td>Precio Unitario</td>
                     <td>Unidad</td>
                     <td>
-                        <a type="button" class="btn btn-default" aria-label="Left Align">
-                            <span class='glyphicon glyphicon-plus' aria-hidden='true'></span>
-                        </a>
-                        <a type="button" class="btn btn-default" aria-label="Left Align">
+                        <a type="button" class="btn btn-default" aria-label="Left Align" href="<?php echo site_url("preciosUnitarios/productos/editar");?>">
                             <span class='glyphicon glyphicon-edit' aria-hidden='true'></span>
                         </a>
                         <a type="button" class="btn btn-default" aria-label="Left Align">
@@ -49,7 +35,6 @@ and open the template in the editor.
 <hr> <!-- Botones -->
 <div align="right">
     <button type="button" class="btn btn-danger">Salir</button>
-    <a type="button" class="btn btn-primary">Agregar Producto</a>
+    <a type="button" class="btn btn-primary" href="<?php echo site_url("preciosUnitarios/productos/agregar");?>">Agregar Producto</a>
 </div>
-    </body>
-</html>
+</section>
