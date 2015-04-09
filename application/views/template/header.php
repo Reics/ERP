@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title><?php echo $title;?></title>
+    <title><?php echo $header['title'];?></title>
 
     <!-- Bootstrap -->
     <link href="<?php echo base_url("assets/css/bootstrap.min.css");?>" rel="stylesheet">
@@ -30,15 +30,13 @@
 </div>
 <div>
 <table height="7%"  style=" height:5%; width:100%; border: solid #013;">
-  <td style="width: 100%; font-size: 18px; color: #013;" align="center">&nbsp;</td>
+  <td style="width: 100%; font-size: 18px; color: #013;" align="center">
+    <ul class="nav nav-pills nav-justified">
+      <li role="presentation" class="<?php echo $header['profecionistas'];?>"><a href="#">Profesionistas</a></li>
+      <li role="presentation" class="<?php echo $header['proveedores'];?>"><a href="#">Proveedores</a></li>
+      <li role="presentation" class="<?php echo $header['presupuestos'];?>"><a href="#">Presupuestos</a></li>
+    </ul>
+  </td>
 </table>
 <table style=" height:5%; width:100%; border: solid #013;">
-
-<tr align="center">
-<td  align="center" bgcolor="#999999"><strong><em>Profesionistas</em></strong></td>
-<td  align="center"><strong><em>Proveedores</em></strong></td>
-<td align="center"><strong><em>Presupuestos</em></strong></td></tr>
-</table>
 </div>
-
-
