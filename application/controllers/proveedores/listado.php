@@ -18,7 +18,10 @@ class Listado extends CI_Controller {
 		$this->load->view('template/header', $data);
 
 		/*carga el contenido de la pagina*/
-		$this->load->view('proveedores/listado');
+		$this->load->database();
+        $this->load->model('proovedores');
+        $x['proovedores'] = $this->proovedores->proovedor();
+		$this->load->view('proveedores/listado',$x);
 
 		/*Se cierra el body y el html, y se agregan los js de bootstrap*/
 		$this->load->view('template/footer');

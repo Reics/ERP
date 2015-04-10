@@ -1,6 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){ 
+            $("#myTab a").click(function(e){
+                e.preventDefault();
+                $(this).tab('show');
+            });
+        });
+    </script>
+    <style>
+        #map-canvas {
+            width: 600px;
+            height: 400px;
+            background-color: #CCC;
+        }
+    </style>
+
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+            function initialize() {
+                
+                var mapCanvas = document.getElementById('map-canvas');
+                var mapOptions = {
+                    center: new google.maps.LatLng(44.5403, -78.5463),
+                    zoom: 8,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                }
+                var map = new google.maps.Map(mapCanvas, mapOptions)
+            }
+            google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
