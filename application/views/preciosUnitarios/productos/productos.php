@@ -7,27 +7,30 @@
         <tr>
             <th>ID</th>
             <th>Nombre</th>
-            <th>Precio Unitario^v</th>
+            <th>Precio Unitario</th>
             <th>Unidad</th>
             <th>Opciones</th>
         </tr>
     </thead>
     <tbody>        
-        
-                <tr>
-                    <td>id</td>
-                    <td>Nombre</td>
-                    <td>Precio Unitario</td>
-                    <td>Unidad</td>
+        <?php if ($producto != NULL) {
+            foreach ($producto as $p): ?>
+                    <tr>
+                    <td><?php echo $p['idPreciosUnitarios']; ?></td>
+                    <td><?php echo $p['nombre']; ?></td>
+                    <td><?php echo $p['precioUnitario']; ?></td>
+                    <td><?php echo $p['unidadMedida']; ?></td>
                     <td>
                         <a type="button" class="btn btn-default" aria-label="Left Align" href="<?php echo site_url("preciosUnitarios/productos/editar");?>">
                             <span class='glyphicon glyphicon-edit' aria-hidden='true'></span>
                         </a>
-                        <a type="button" class="btn btn-default" aria-label="Left Align">
+                        <a type="button" class="btn btn-default" aria-label="Left Align" href="<?=site_url()?>/preciosUnitarios/productos/delete/<?=$p['idPreciosUnitarios']?>">
                             <span class='glyphicon glyphicon-remove' aria-hidden='true'></span>
                         </a>
                     </td>
                 </tr>
+                <?php endforeach;
+                }?>
         
     </tbody>
 </table>
@@ -35,6 +38,6 @@
 <hr> <!-- Botones -->
 <div align="right">
     <button type="button" class="btn btn-danger">Salir</button>
-    <a type="button" class="btn btn-primary" href="<?php echo site_url("preciosUnitarios/productos/agregar");?>">Agregar Producto</a>
+    <a type="button" class="btn btn-primary" href="<?php echo site_url("preciosUnitarios/productos/set_form");?>">Agregar Producto</a>
 </div>
 </section>

@@ -5,7 +5,7 @@
 <table class="table table-striped" id="dataTable">
     <thead>    
         <tr>
-            <th>ID^v</th>
+            <th>ID</th>
             <th>Contratista</th>
             <th>Fecha</th>
             <th>Opciones</th>
@@ -13,9 +13,9 @@
     </thead>
     <tbody>        
                 <tr>
-                    <td>id^v</td>
-                    <td>contratista</td>
-                    <td>fecha</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                     <td>
                         <a type="button" class="btn btn-default" aria-label="Left Align">
                             <span class='glyphicon glyphicon-list' aria-hidden='true'></span>
