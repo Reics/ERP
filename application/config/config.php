@@ -14,11 +14,7 @@
 | path to your installation.
 |
 */
-<<<<<<< HEAD
 $config['base_url']	= 'http://localhost/SIDA-ISEI/';
-=======
-$config['base_url']	= 'http://localhost:8080/SIDA-ISEI';
->>>>>>> 444c8b2d59c2be166faea9a971b2941542159bb9
 
 /*
 |--------------------------------------------------------------------------

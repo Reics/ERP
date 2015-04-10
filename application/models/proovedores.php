@@ -4,7 +4,7 @@ if (!defined('BASEPATH')) {
     exit('No direct script access allowed');
 }
 
-class proovedores extends CI_Model {
+class Proovedores extends CI_Model {
     function get_proovedores() {
         $this->db->select("proovedores.idProovedor,proovedores.Nombre as proovedor,proovedores.Provincia,categorias.Nombre");
         $this->db->from("proovedores");
@@ -83,7 +83,7 @@ class proovedores extends CI_Model {
 
     function get_all($id) {
         $this->db->select("proovedores.idProovedor,proovedores.Nombre,proovedores.Direccion,proovedores.codigoPostal,proovedores.Provincia, proovedores.Estado,
-        numeros.Numero1 as No1,numeros.Numero2 as No2,numeros.Numero3 as No3,correos.Correo1 as Co1,correos.Correo2 as Co2,Facebooks.Facebook1 as Fa1,
+        numeros.Numero1 as No1,numeros.Numero2 as No2,numeros.Numero3 as No3,correos.Correo1 as Co1,correos.Correo2 as Co2,facebooks.Facebook1 as Fa1,
         facebooks.facebook2 as Fa2");
         
         $this->db->from("proovedores");
