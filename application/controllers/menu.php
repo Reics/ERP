@@ -11,7 +11,7 @@ class Menu extends CI_Controller {
 
     public function index()
 	{
-		//shalalalala n.n' 
+		header('Location: http://sida-isei.esy.es/index.php/menu/proveedores'); 
 	}
 
 	public function proveedores()
