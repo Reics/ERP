@@ -16,7 +16,6 @@ class proovedores extends CI_Model {
     }
 
     public function delete_proovedor($id){
-        /*
         $this->db->where('idProovedor', $id);
         $this->db->delete('proovedores');
 
@@ -25,17 +24,13 @@ class proovedores extends CI_Model {
 
         $this->db->where('idProovedor', $id);
         $this->db->delete('proovedorescontactos');
-        */
-
-        //eliminar localizaciones
-        //localizacion
+        
+        /*
         $this->db->select("idLocalizacion");
         $this->db->from("proovedores");
         $this->db->where('idProovedor', $id);
         $localizaciones = $this->db->get();
         return ($localizaciones->num_rows() > 0) ? $localizaciones->result_array() : "";
-        
-        /*
         //numeros
         $this->db->select("idNumero");
         $this->db->from("localizaciones");
@@ -60,13 +55,9 @@ class proovedores extends CI_Model {
         $this->db->where('idLocalizacion', $localizaciones);
         $facebooks = $this->db->get();
         return ($facebooks->num_rows() > 0) ? $facebooks->result_array() : "";
-        */
-
-
+        
         $this->db->where('idLocalizacion', $localizaciones);
         $this->db->delete('localizaciones');
-
-        /*
         $this->db->where('idCorreo', $correos);
         $this->db->delete('correos');
 

@@ -2,14 +2,13 @@
         <div class="container">
 
 <h2 align="center">Listado de Proovedores</h2><hr>
-    <table class="table table-striped display" id="dataTable"> <!-- Tabla de competencias -->
+    <table id="styling" class="table tablesorter"> <!-- Tabla de competencias -->
     <thead>
         <tr>
             <th>Proovedor</th>
             <th>Provincia</th>
             <th>Códio de Proovedor</th>
             <th>Categoría</th>
-            <th>Ultima modificación</th>
         </tr>   
     </thead>
     <tbody>
@@ -20,7 +19,6 @@
             <td><?php echo $c['Provincia']?></td>
             <td><?php echo $c['idProovedor']?></td>
             <td><?php echo $c['Nombre']?></td>
-            <td>05/03/2015</td>
             <td>
                 <a type='button' class='btn btn-default' aria-label='Left Align' href="<?=site_url()?>/proveedores/listado/contacto/<?=$c['idProovedor']?>">
                     <span class='glyphicon glyphicon-edit' aria-hidden='true'></span>
@@ -34,8 +32,5 @@
     
     </tbody>
 </table>
-
-    
-
     </div>
 </section>

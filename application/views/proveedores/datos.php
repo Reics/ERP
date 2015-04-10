@@ -108,7 +108,7 @@
                 </tr>
            
 </table>
-</div>
+</div><br>
                 <div class="col-sm-offset-8 col-sm-10">
                                         <a role="button" class="btn btn-success" href="<?php echo site_url("proveedores/contacto");?>">Editar</a>
                 </div>
