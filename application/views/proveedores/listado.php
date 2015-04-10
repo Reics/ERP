@@ -16,16 +16,16 @@
         <?php if ($proovedores != NULL) {
                 foreach ($proovedores as $c): ?>
         <tr>
-            <td><a href="<?php echo site_url("proveedores/listado/datos");?>"><?php echo $c['proovedor']?></a></td>
+            <td><a href="<?=site_url()?>/proveedores/listado/datos/<?=$c['idProovedor']?>"><?php echo $c['proovedor']?></a></td>
             <td><?php echo $c['Provincia']?></td>
             <td><?php echo $c['idProovedor']?></td>
             <td><?php echo $c['Nombre']?></td>
             <td>05/03/2015</td>
             <td>
-                <a type='button' class='btn btn-default' aria-label='Left Align' href="<?php echo site_url("proveedores/listado/contacto");?>">
+                <a type='button' class='btn btn-default' aria-label='Left Align' href="<?=site_url()?>/proveedores/listado/contacto/<?=$c['idProovedor']?>">
                     <span class='glyphicon glyphicon-edit' aria-hidden='true'></span>
                 </a>
-                <a type='button' class='btn btn-default' aria-label='Left Align' href="<?php echo site_url("proveedores/listado/contacto");?>">
+                <a type='button' class='btn btn-default' aria-label='Left Align' href="<?=site_url()?>/proveedores/listado/borrar/<?=$c['idProovedor']?>">
                     <span class='glyphicon glyphicon-remove' aria-hidden='true'></span>
                 </a>
             </td>

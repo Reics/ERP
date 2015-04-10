@@ -52,4 +52,6 @@ class Contacto extends CI_Controller {
 		$this->load->view('template/footer');
 	}
 
+	
+
 }

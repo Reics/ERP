@@ -20,28 +20,29 @@ class Listado extends CI_Controller {
 		/*carga el contenido de la pagina*/
 		$this->load->database();
         $this->load->model('proovedores');
-        $x['proovedores'] = $this->proovedores->proovedor();
+        $x['proovedores'] = $this->proovedores->get_proovedores();
 		$this->load->view('proveedores/listado',$x);
 
 		/*Se cierra el body y el html, y se agregan los js de bootstrap*/
 		$this->load->view('template/footer');
 	}
 
-	public function datos()
-	{
+	public function datos($id){
 		$data['header'] = array('title' => 'Listado' , 'proveedores' => 'active' , 'presupuestos' => '' , 'profecionistas' => '' );//se inicializa el titulo de la pagina
 
 		/*Habre el html y el body, y carga el header junto con el css de bootstrap*/
 		$this->load->view('template/header', $data);
 
 		/*carga el contenido de la pagina*/
-		$this->load->view('proveedores/datos');
+		$this->load->model('proovedores');
+		$x['proovedores'] = $this->proovedores->get_all($id);
+		$this->load->view('proveedores/datos',$x);
 
 		/*Se cierra el body y el html, y se agregan los js de bootstrap*/
 		$this->load->view('template/footer');
 	}
 
-	public function contacto()
+	public function contacto($id)
 	{
 		$data['header'] = array('title' => 'Listado' , 'proveedores' => 'active' , 'presupuestos' => '' , 'profecionistas' => '' );//se inicializa el titulo de la pagina
 
@@ -49,13 +50,14 @@ class Listado extends CI_Controller {
 		$this->load->view('template/header', $data);
 
 		/*carga el contenido de la pagina*/
+
 		$this->load->view('proveedores/contacto');
 
 		/*Se cierra el body y el html, y se agregan los js de bootstrap*/
 		$this->load->view('template/footer');
 	}
 
-	public function contactos()
+	public function contactos($id)
 	{
 		$data['header'] = array('title' => 'Listado' , 'proveedores' => 'active' , 'presupuestos' => '' , 'profecionistas' => '' );//se inicializa el titulo de la pagina
 
@@ -63,12 +65,36 @@ class Listado extends CI_Controller {
 		$this->load->view('template/header', $data);
 
 		/*carga el contenido de la pagina*/
-		$this->load->view('proveedores/contactos');
+		$this->load->model('proovedores');
+		$x['proovedores'] = $this->proovedores->get_contactos($id);
+		$this->load->view('proveedores/contactos',$x);
 
 		/*Se cierra el body y el html, y se agregan los js de bootstrap*/
 		$this->load->view('template/footer');
 	}
 
+	public function mapa($id)
+	{
+		$data['header'] = array('title' => 'Listado' , 'proveedores' => 'active' , 'presupuestos' => '' , 'profecionistas' => '' );//se inicializa el titulo de la pagina
+
+		/*Habre el html y el body, y carga el header junto con el css de bootstrap*/
+		$this->load->view('template/header', $data);
+
+		/*carga el contenido de la pagina*/
+		/*carga el contenido de la pagina*/
+		$this->load->model('proovedores');
+		$x['proovedores'] = $this->proovedores->get_direccion($id);
+		$this->load->view('proveedores/mapa',$x);
+
+		/*Se cierra el body y el html, y se agregan los js de bootstrap*/
+		$this->load->view('template/footer');
+	}
+
+	public function borrar($id){
+		$this->load->model('proovedores');
+		$this->proovedores->delete_proovedor($id);
+        redirect('proveedores/listado');
+	}
 
 	public function aecontacto()
 	{
@@ -83,19 +109,4 @@ class Listado extends CI_Controller {
 		/*Se cierra el body y el html, y se agregan los js de bootstrap*/
 		$this->load->view('template/footer');
 	}
-
-	public function mapa()
-	{
-		$data['header'] = array('title' => 'Listado' , 'proveedores' => 'active' , 'presupuestos' => '' , 'profecionistas' => '' );//se inicializa el titulo de la pagina
-
-		/*Habre el html y el body, y carga el header junto con el css de bootstrap*/
-		$this->load->view('template/header', $data);
-
-		/*carga el contenido de la pagina*/
-		$this->load->view('proveedores/mapa');
-
-		/*Se cierra el body y el html, y se agregan los js de bootstrap*/
-		$this->load->view('template/footer');
-	}
-
 }
