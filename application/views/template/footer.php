@@ -1,4 +1,4 @@
-	 
+</div>	 
 
 	 <footer style="
 margin: 10% auto ;">
