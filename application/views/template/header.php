@@ -32,9 +32,9 @@
 <table height="7%"  style=" height:5%; width:100%; border: solid #013;">
   <td style="width: 100%; font-size: 18px; color: #013;" align="center">
     <ul class="nav nav-pills nav-justified">
-      <li role="presentation" class="<?php echo $header['profecionistas'];?>"><a href="#">Profesionistas</a></li>
-      <li role="presentation" class="<?php echo $header['proveedores'];?>"><a href="#">Proveedores</a></li>
-      <li role="presentation" class="<?php echo $header['presupuestos'];?>"><a href="#">Presupuestos</a></li>
+      <li role="presentation" class="<?php echo $header['profecionistas'];?>"><a href="<?php echo site_url("menu/profesionistas");?>">Profesionistas</a></li>
+      <li role="presentation" class="<?php echo $header['proveedores'];?>"><a href="<?php echo site_url("menu/proveedores");?>">Proveedores</a></li>
+      <li role="presentation" class="<?php echo $header['presupuestos'];?>"><a href="<?php echo site_url("menu/preciosUnitarios");?>">Presupuestos</a></li>
     </ul>
   </td>
 </table>
