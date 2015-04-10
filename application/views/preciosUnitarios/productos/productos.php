@@ -7,18 +7,19 @@
         <tr>
             <th>ID</th>
             <th>Nombre</th>
-            <th>Precio Unitario^v</th>
+            <th>Precio Unitario</th>
             <th>Unidad</th>
             <th>Opciones</th>
         </tr>
     </thead>
     <tbody>        
-        
-                <tr>
-                    <td>id</td>
-                    <td>Nombre</td>
-                    <td>Precio Unitario</td>
-                    <td>Unidad</td>
+        <?php if ($producto != NULL) {
+            foreach ($producto as $p): ?>
+                    <tr>
+                    <td><?php echo $p['idPreciosUnitarios']; ?></td>
+                    <td><?php echo $p['Nombre']; ?></td>
+                    <td><?php echo $p['precioUnitario']; ?></td>
+                    <td><?php echo $p['UnidadMedida']; ?></td>
                     <td>
                         <a type="button" class="btn btn-default" aria-label="Left Align" href="<?php echo site_url("preciosUnitarios/productos/editar");?>">
                             <span class='glyphicon glyphicon-edit' aria-hidden='true'></span>
@@ -28,6 +29,8 @@
                         </a>
                     </td>
                 </tr>
+                <?php endforeach;
+                }?>
         
     </tbody>
 </table>

@@ -7,6 +7,7 @@ class Productos extends CI_Controller {
         { 
             parent::__construct();
             $this->load->helper('url'); 
+            $this->load->model('preciosUnitarios/productos_model');
         }
 
 
@@ -14,11 +15,15 @@ class Productos extends CI_Controller {
 	{
 		$data['header'] = array('title' => 'Productos' , 'proveedores' => '' , 'presupuestos' => 'active' , 'profecionistas' => '' );//se inicializa el titulo de la pagina
 
+		$tabla = array(
+			'producto' => $this->productos_model->get_all()
+		);
+
 		/*Habre el html y el body, y carga el header junto con el css de bootstrap*/
 		$this->load->view('template/header', $data);
 
 		/*carga el contenido de la pagina*/
-		$this->load->view('preciosUnitarios/productos/productos');
+		$this->load->view('preciosUnitarios/productos/productos',$tabla);
 
 		/*Se cierra el body y el html, y se agregan los js de bootstrap*/
 		$this->load->view('template/footer');
