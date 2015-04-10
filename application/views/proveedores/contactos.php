@@ -1,17 +1,19 @@
 
 <section style="margin-left: 50px; margin-right: 50px;">
-<?php foreach ($proovedores as $e): ?>
 
 <div class="row">
 
 <legend align="center">Proveedor</legend>
 <div>
+<?php foreach ($proovedores as $e): ?>
 <a role="button" class="btn btn-primary btn-lg" href="<?=site_url()?>/proveedores/listado/datos/<?=$e['idp']?>">Ficha</a>
 <a role="button" class="btn btn-primary btn-lg" href="<?=site_url()?>/proveedores/listado/mapa/<?=$e['idp']?>">Mapa</a>
 <a role="button" class="btn btn-primary btn-lg" href="<?=site_url()?>/proveedores/listado/contactos/<?=$e['idp']?>">Contacto</a>
+<?php break; endforeach?>
 </div> 
 
 <legend align="center">Contacto</legend>
+<?php foreach ($proovedores as $e): ?>
 <div align="center">
                 <table style="margin-left: 50px; margin left:30px">
                     
@@ -31,7 +33,7 @@
                         <td><input type="text" readonly="readonly" class="form-control" id="ccontacto" value="<?php echo $e['idc']; ?>"></td>
                     </div>
                 </form>
-             </tr>  
+             </tr>
              <tr> 
                 <form class="form-inline">
                     <div class="form-group">
@@ -50,6 +52,7 @@
                     </div>
                 </form>
                 </tr>
+                <?php /*
                 <tr>
                 <form class="form-inline">
                     <div class="form-group">
@@ -60,15 +63,16 @@
                     </div>
                 </form>
                 </tr>
-                
-                
+                */ ?>
+               
 </table>
 </div>
+<br>
                 <div class="col-sm-offset-8 col-sm-10">
-                                        <a role="button" class="btn btn-success" href="<?php echo site_url("proveedores/listado/aecontacto");?>">Editar</a>
+                                        <a role="button" class="btn btn-success" href="<?=site_url()?>/proveedores/listado/aecontacto/<?=$e['idc']?>">Editar</a>
                 </div>
             </div>
+            <?php endforeach?> 
 
 </div>
-<?php endforeach?>
 </section>

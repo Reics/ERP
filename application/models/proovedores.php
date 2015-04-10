@@ -99,15 +99,12 @@ class proovedores extends CI_Model {
 
     function get_contactos($id) {
 
-        $this->db->select("proovedores.idProovedor as idp,contactos.Nombre as No,contactos.idContacto idc,contactos.Direccion as Dir,contactos.RFC RFC,contactos.Provincia Pro,numeros.Numero1 as No1,
-            correos.Correo1 as Co1");
+        $this->db->select("proovedores.idProovedor as idp,contactos.Nombre as No,contactos.idContacto idc,contactos.Direccion as Dir,
+            contactos.RFC RFC,contactos.Provincia Pro");
         $this->db->from("proovedores");
         $this->db->join("proovedorescontactos","proovedorescontactos.idProovedor=proovedores.idProovedor","inner");
         $this->db->join("contactos","contactos.idContacto=proovedorescontactos.idContacto","inner");
-        $this->db->join("localizaciones","localizaciones.idLocalizacion=contactos.idLocalizacion","inner");
-        $this->db->join("numeros","numeros.idNumero=localizaciones.idNumero","inner");
-        $this->db->join("correos","correos.idCorreo=localizaciones.idCorreo","inner");
-        $this->db->where('proovedores.idProovedor', $id);
+        $this->db->where('proovedorescontactos.idProovedor', $id);
 
         $query = $this->db->get();
         return ($query->num_rows() > 0) ? $query->result_array() : "";
@@ -120,6 +117,20 @@ class proovedores extends CI_Model {
 
         $query = $this->db->get();
         return ($query->num_rows() > 0) ? $query->result_array() : "";
+    }
+
+    function editar_direccion($id) {
+        $this->db->select("idContacto,Nombre,Direccion,Provincia,RFC");
+        $this->db->from("contactos");
+        $this->db->where('idContacto', $id);
+
+        $query = $this->db->get();
+        return ($query->num_rows() > 0) ? $query->result_array() : "";
+    }
+
+    public function update_contacto($data) {
+        $this->db->where('idContacto', $data['idContacto']);
+        $this->db->update('contactos', $data);
     }
 }
 

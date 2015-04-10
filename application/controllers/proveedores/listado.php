@@ -96,7 +96,7 @@ class Listado extends CI_Controller {
         redirect('proveedores/listado');
 	}
 
-	public function aecontacto()
+	public function aecontacto($id)
 	{
 		$data['header'] = array('title' => 'Listado' , 'proveedores' => 'active' , 'presupuestos' => '' , 'profecionistas' => '' );//se inicializa el titulo de la pagina
 
@@ -104,9 +104,18 @@ class Listado extends CI_Controller {
 		$this->load->view('template/header', $data);
 
 		/*carga el contenido de la pagina*/
-		$this->load->view('proveedores/agregareditarcontacto');
+		$this->load->model('proovedores');
+		$x['proovedores'] = $this->proovedores->editar_direccion($id);
+		$this->load->view('proveedores/agregareditarcontacto',$x);
 
 		/*Se cierra el body y el html, y se agregan los js de bootstrap*/
 		$this->load->view('template/footer');
+	}
+
+	public function update(){
+		$data = $this->input->post();
+		$this->load->model('proovedores');
+		$this->proovedores->update_contacto($data);
+		redirect('proveedores/listado');
 	}
 }
