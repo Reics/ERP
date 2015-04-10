@@ -51,17 +51,63 @@ class Productos extends CI_Controller {
         redirect('preciosunitarios/productos');
     }
 
-    public function editar() {
-        $data['header'] = array('title' => 'Editar Productos', 'proveedores' => '', 'presupuestos' => 'active', 'profecionistas' => ''); //se inicializa el titulo de la pagina
+    public function update_form($id) {
+        $get_data = $this->productos_model->get_by_id($id);
+        if ($get_data != NULL) {
+                $nombre = $get_data["nombre"];
+                $unidadMedida = $get_data["unidadMedida"];
+                $precioUnitario = $get_data["precioUnitario"];
+                $idCategoria = $get_data["idCategoria"];
+            
+            $data = array (
+                'idPreciosUnitarios' => $id,
+                'nombre' => $nombre,
+                'unidadMedida' => $unidadMedida,
+                'precioUnitario' => $precioUnitario,
+                'idCategoria' => $idCategoria
+            );
 
-        /* Habre el html y el body, y carga el header junto con el css de bootstrap */
-        $this->load->view('template/header', $data);
+        } else {
+            $data = '';
+        }
+        
+        $head['header'] = array('title' => 'Editar Productos', 'proveedores' => '', 'presupuestos' => 'active', 'profecionistas' => ''); //se inicializa el titulo de la pagina
+
+        //Habre el html y el body, y carga el header junto con el css de bootstrap */
+        $this->load->view('template/header', $head);
 
         /* carga el contenido de la pagina */
-        $this->load->view('preciosUnitarios/productos/editarProducto');
+        $this->load->view('preciosUnitarios/productos/editarProducto', $data);
 
         /* Se cierra el body y el html, y se agregan los js de bootstrap */
         $this->load->view('template/footer');
+        
+    }
+    public function update() {
+        $data = $this->input->post();
+        $this->productos_model->update($data);
+        redirect('preciosunitarios/productos');
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

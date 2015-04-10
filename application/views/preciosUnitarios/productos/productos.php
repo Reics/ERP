@@ -22,7 +22,7 @@
                     <td><?php echo $p['precioUnitario']; ?></td>
                     <td><?php echo $p['unidadMedida']; ?></td>
                     <td>
-                        <a type="button" class="btn btn-default" aria-label="Left Align" href="<?php echo site_url("preciosUnitarios/productos/editar");?>">
+                        <a type="button" class="btn btn-default" aria-label="Left Align" href="<?=site_url()?>/preciosUnitarios/productos/update_form/<?=$p['idPreciosUnitarios']?>">
                             <span class='glyphicon glyphicon-edit' aria-hidden='true'></span>
                         </a>
                         <a type="button" class="btn btn-default" aria-label="Left Align" href="<?=site_url()?>/preciosUnitarios/productos/delete/<?=$p['idPreciosUnitarios']?>">

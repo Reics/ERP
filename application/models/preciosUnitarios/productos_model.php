@@ -16,12 +16,10 @@ class Productos_model extends CI_Model {
         $this->db->where('idPreciosUnitarios', $id);
         $this->db->delete('preciosunitarios'); 
     }
-
     public function get_by_id($id) {
         $query = $this->db->get_where('preciosunitarios', array('idPreciosUnitarios'=>$id));
         return ($query->num_rows() > 0) ? $query->row_array() : NULL;
     }
-
     public function get_all() {
         $query = $this->db->get('preciosunitarios');
         return ($query->num_rows() > 0) ? $query->result_array() : NULL;

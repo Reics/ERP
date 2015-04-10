@@ -26,8 +26,10 @@
             <div class="form-group col-md-8">
                 <label class="col-md-2 control-label etiquetas" for="Categoria" style="padding-left: 0px; padding-right: 0px;">Categoria</label>
                 <select id="idCategoria" name="idCategoria" class="form-control">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
+                    <option value="1">Obra Negra</option>
+                    <option value="2">Acabados</option>
+                    <option value="3">Instalaciones</option>
+                    
                 </select>
             </div>
             <div class="col-md-8" style="margin-left:100px;">
