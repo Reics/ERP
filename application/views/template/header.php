@@ -5,15 +5,15 @@
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+       <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0-rc2/js/bootstrap.min.js"></script>
+    <script src="jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="/path/to/jquery-latest.js"></script> 
+<script type="text/javascript" src="/path/to/jquery.tablesorter.js"></script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0-rc2/css/bootstrap.css" rel="stylesheet" media="screen">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function(){ 
-            $("#myTab a").click(function(e){
-                e.preventDefault();
-                $(this).tab('show');
-            });
-        });
-    </script>
     <style>
         #map-canvas {
             width: 600px;
@@ -21,6 +21,36 @@
             background-color: #CCC;
         }
     </style>
+    !-- choose a theme file -->
+<link rel="stylesheet" href="/path/to/theme.default.css">
+<!-- load jQuery and tablesorter scripts -->
+<script type="text/javascript" src="/path/to/jquery-latest.js"></script>
+<script type="text/javascript" src="/path/to/jquery.tablesorter.js"></script>
+
+<!-- tablesorter widgets (optional) -->
+<script type="text/javascript" src="/path/to/jquery.tablesorter.widgets.js"></script>
+<script>
+$(document).ready(function() {
+    $("#styling").tableSorter({
+        sortColumn: 'Proovedor',           // número entero del índice o nombre de la columna en minúsculas
+        sortClassAsc: 'headerSortUp',       // clase css de la cabecera de la columna cuando aplicamos un orden ascendente
+        sortClassDesc: 'headerSortDown',    // clase css de la cabecera de la columna cuando aplicamos un orden descendente
+        headerClass: 'header'           // clase genérica de las cabeceras (th's)
+        sortColumn: 'Provincia',           // número entero del índice o nombre de la columna en minúsculas
+        sortClassAsc: 'headerSortUp',       // clase css de la cabecera de la columna cuando aplicamos un orden ascendente
+        sortClassDesc: 'headerSortDown',    // clase css de la cabecera de la columna cuando aplicamos un orden descendente
+        headerClass: 'header'  
+        sortColumn: 'códio de proovedor',           // número entero del índice o nombre de la columna en minúsculas
+        sortClassAsc: 'headerSortUp',       // clase css de la cabecera de la columna cuando aplicamos un orden ascendente
+        sortClassDesc: 'headerSortDown',    // clase css de la cabecera de la columna cuando aplicamos un orden descendente
+        headerClass: 'header'  
+        sortColumn: 'categoría',           // número entero del índice o nombre de la columna en minúsculas
+        sortClassAsc: 'headerSortUp',       // clase css de la cabecera de la columna cuando aplicamos un orden ascendente
+        sortClassDesc: 'headerSortDown',    // clase css de la cabecera de la columna cuando aplicamos un orden descendente
+        headerClass: 'header'  
+    });
+});
+</script>
 
     <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script>
