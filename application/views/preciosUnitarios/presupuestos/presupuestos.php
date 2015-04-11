@@ -23,10 +23,10 @@
                             <a type="button" class="btn btn-default" aria-label="Left Align">
                                 <span class='glyphicon glyphicon-list' aria-hidden='true'></span>
                             </a>
-                            <a type="button" class="btn btn-default" aria-label="Left Align">
+                            <a type="button" class="btn btn-default" aria-label="Left Align" href="<?= site_url() ?>/preciosUnitarios/presupuestos/update_form/<?= $p['idPresupuesto'] ?>">
                                 <span class='glyphicon glyphicon-edit' aria-hidden='true'></span>
                             </a>
-                            <a type="button" class="btn btn-default" aria-label="Left Align">
+                            <a type="button" class="btn btn-default" aria-label="Left Align" href="<?= site_url() ?>/preciosUnitarios/presupuestos/delete/<?= $p['idPresupuesto'] ?>">
                                 <span class='glyphicon glyphicon-remove' aria-hidden='true'></span>
                             </a>
                         </td>
@@ -39,6 +39,6 @@
     <hr> <!-- Botones -->
     <div align="right">
         <button type="button" class="btn btn-danger">Salir</button>
-        <a type="button" class="btn btn-primary">Agregar Presupuesto</a>
+        <a type="button" class="btn btn-primary" href="<?php echo site_url("preciosUnitarios/presupuestos/set_form"); ?>" >Agregar Presupuesto</a>
     </div>
 </section>

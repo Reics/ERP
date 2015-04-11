@@ -28,7 +28,7 @@ class Presupuestos extends CI_Controller {
         $this->load->view('template/footer');
     }
 
-    public function agregar() {
+    public function set_form() {
         $data['header'] = array('title' => 'Agregar Presupuesto', 'proveedores' => '', 'presupuestos' => 'active', 'profecionistas' => ''); //se inicializa el titulo de la pagina
 
         /* Habre el html y el body, y carga el header junto con el css de bootstrap */
@@ -40,8 +40,37 @@ class Presupuestos extends CI_Controller {
         /* Se cierra el body y el html, y se agregan los js de bootstrap */
         $this->load->view('template/footer');
     }
+    
+    public function set() {
+        $data = $this->input->post();
+        $this->presupuestos_model->set($data);
+        redirect('preciosunitarios/presupuestos');
+    }
+    
+       public function delete($id) {
+        $this->presupuestos_model->delete($id);
+        redirect('preciosunitarios/presupuestos');
+    }
 
-    public function editar() {
+    public function update_form() {
+        $get_data = $this->productos_model->get_by_id($id);
+        if ($get_data != NULL) {
+                $nombre = $get_data["nombre"];
+                $unidadMedida = $get_data["unidadMedida"];
+                $precioUnitario = $get_data["precioUnitario"];
+                $idCategoria = $get_data["idCategoria"];
+            
+            $data = array (
+                'idPreciosUnitarios' => $id,
+                'nombre' => $nombre,
+                'unidadMedida' => $unidadMedida,
+                'precioUnitario' => $precioUnitario,
+                'idCategoria' => $idCategoria
+            );
+
+        } else {
+            $data = '';
+        }
         $data['header'] = array('title' => 'Editar Presupuesto', 'proveedores' => '', 'presupuestos' => 'active', 'profecionistas' => ''); //se inicializa el titulo de la pagina
 
         /* Habre el html y el body, y carga el header junto con el css de bootstrap */
