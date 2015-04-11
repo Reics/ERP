@@ -1,22 +1,7 @@
 
 <section style="height:100%; width:100%;">
 
-<div style="background-color:#013;" align="center">
-<img src="//localhost/GitHub/ERP/images/sida.jpg"   alt="logo" width="367" height="60"  />
-</div>
 
-<div>
-<table height="7%"  style=" height:5%; width:100%; border: solid #013;">
-  <td style="width: 100%; font-size: 18px; color: #013;" align="center">&nbsp;</td>
-</table>
-<table style=" height:10%; width:100%; border: solid #013;">
-
-<tr align="center">
-<td  align="center" bgcolor="#999999"><strong><em>Profesionistas</em></strong></td>
-<td  align="center"><strong><em>Proveedores</em></strong></td>
-<td align="center"><strong><em>Presupuestos</em></strong></td></tr>
-</table>
-</div>
 
 <br /><hr />
 <h3	align="center">Nueva Especialidad</h3>
@@ -57,7 +42,7 @@
 <button name="agregar" class="btn btn-primary" style=" alignment-adjust:middle; margin:5px; width:200px" >Agregar</button>
 </form></fieldset>
 
-<a href="verespecialidad">
+<a href="<?php echo base_url(); ?>index.php/">
 <button name="cerrar" class="btn btn-danger" style=" alignment-adjust:middle; width:200px; margin:4px;">Cancelar</button>
 </a> 
 

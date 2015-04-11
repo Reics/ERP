@@ -1,26 +1,8 @@
-
 <section style="height:100%; width:100%;">
 
-<div style="background-color:#013;" align="center">
-<img src="//localhost/GitHub/ERP/images/sida.jpg"  alt="logo" width="367" height="60"  />
-</div>
-
-<div>
-<table height="7%"  style=" height:5%; width:100%; border: solid #013;">
-  <td style="width: 100%; font-size: 18px; color: #013;" align="center">&nbsp;</td>
-</table>
-<table style=" height:10%; width:100%; border: solid #013;">
-
-<tr align="center">
-<td  align="center" bgcolor="#999999"><strong><em>Profesionistas</em></strong></td>
-<td  align="center"><strong><em>Proveedores</em></strong></td>
-<td align="center"><strong><em>Presupuestos</em></strong></td></tr>
-</table>
-</div>
 
 
 
-<form class="form-horizontal">
 <fieldset>
 
 
@@ -30,12 +12,13 @@
   <div class="panel panel-default">
   <!-- Default panel contents -->
   <div class="panel-heading">
-    <p>&nbsp;</p>
+    
     <p alig align="center">Listado de profesionistas</p>
   </div>
 
-  <table class="table" style=" width:100%;" align="center">
+  <table class="table table-hover" style=" width:80%;" align="center">
      <tr>
+
     <th scope="col">Nombre  </th>
     <th scope="col">Apellido    </th>
     <th scope="col">Profesión     </th>
@@ -44,19 +27,26 @@
     <th scope="col">Domicilio    </th>
     <th scope="col">Telefono   </th>
     <th scope="col">Ver Mas </th>
+    </tr>   
+      <?php foreach($registros as $fila){  ?>
+    <tr>
+    <td><?php echo $fila->Nombre; ?></td>
+    <td><?php echo $fila->Apellidos; ?></td>
+    <td> <?php  $dato=$fila->ID_Profesionistas; echo $fila->profesion; ?></td>
+    <td><?php echo $fila->nombre_especialidad; ?></td>
+    <td><?php echo $fila->FECHA_ACTUALIZACION; ?></td>
+    <td><?php echo $fila->calle1; ?></td>
+    <td><?php echo $fila->movil1; ?></td>
+    
+    <td>
+      <form name="form1" method="post" action="<?php echo base_url(); ?>/index.php/ver/vermas" >
+          <button id="vermas" name="id" class="btn btn-primary btn-s" type="submit" value="<?php echo $dato?>"> <span class="glyphicon glyphicon-star"></span> Ver Más </button>
+      </form>
+    </td>
   </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-     <td><a href="ver">VER MAS</a></td>
-  </tr>
+       <?php } ?>     
   </table>
-  <br>
+
   
   
 
@@ -72,41 +62,43 @@
 
 
 </div>
+<br /><br />
 </fieldset>
-</form>
-
-<form class="navbar-form navbar-left" role="search">
+<div style="  float:none;">
+<form class="navbar-form navbar-left" role="search" method="post" action="<?php echo base_url(); ?>index.php/ver/buscarPorProfesion">
   <div class="form-group">
-    <input type="text" class="form-control" placeholder="Search">
+    <input type="text" name="profesion" class="form-control" placeholder="Search" >
   </div>
-  <button type="submit" class="btn btn-default">Filtrar por profesion </button>
+     <button type="submit" class="btn btn-default">Filtrar por profesion </button>
 </form>
 
 
-<form class="navbar-form navbar-left" role="search">
+
+<form class="navbar-form navbar-left" role="search" method="post" action="<?php echo base_url(); ?>index.php/ver/buscarPorEspecialidad">
   <div class="form-group">
-    <input type="text" class="form-control" placeholder="Search">
+    <input type="text"  name="especialidad"class="form-control" placeholder="Search">
   </div>
   <button type="submit" class="btn btn-default">Filtrar por especialidad </button>
 </form>
 
 
 
-<form class="navbar-form navbar-left" role="search">
+<form class="navbar-form navbar-left" role="search" method="post" action="<?php echo base_url(); ?>index.php/ver/buscarPorCarrera">
   <div class="form-group">
-    <input type="text" class="form-control" placeholder="Search">
+    <input type="text"  name="carrera"class="form-control" placeholder="Search">
   </div>
+  
   <button type="submit" class="btn btn-default">Filtrar por carrera </button>
 </form>
-
-<div align="center"> 
+</div>
+<br /><br /><br /><br />
+<div align="center">
 <a href="Nuevo">
-<button name="agregar" class="btn btn-primary" style=" alignment-adjust:middle; margin:5px; width:200px" >Agregar nuevo</button>
+<button name="agregar" class="btn btn-primary" style=" alignment-adjust:middle; margin:5px; width:150px" >Agregar nuevo</button>
 </a>
-<a href="Welcome">
-<button name="cerrar" class="btn btn-danger" style=" alignment-adjust:middle; width:200px;">Cerrar</button>
-</a></div>
+<a href="<?php echo base_url(); ?>index.php/Welcome">
+<button name="cerrar" class="btn btn-danger" style=" alignment-adjust:middle; width:150px;">Cerrar</button>
+</a>
+</div>
 </section>
-
-
 

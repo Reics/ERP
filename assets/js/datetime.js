@@ -1,4 +1,4 @@
-* bootstrap-datepicker.js
+/* bootstrap-datepicker.js
  * http://www.eyecon.ro/bootstrap-datepicker
  * =========================================================
  * Copyright 2012 Stefan Petre

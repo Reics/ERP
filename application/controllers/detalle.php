@@ -6,7 +6,7 @@ class Detalle extends CI_Controller {
 	public function index()
 	{
 
-		$data['title'] = 'Listado de profesionistas';//se inicializa el titulo de la pagina
+	$data['header'] = array('title' => 'Proveedores' , 'proveedores' => '' , 'presupuestos' => '' , 'profecionistas' => 'active' );//se inicializa el titulo de la pagina
 
 		/*Habre el html y el body, y carga el header junto con el css de bootstrap*/
 		$this->load->view('header', $data);

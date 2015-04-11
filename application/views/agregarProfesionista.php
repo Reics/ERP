@@ -1,26 +1,11 @@
 
         <section>
         
-        <div style="background-color:#013;" align="center">
-<img src="//localhost/GitHub/ERP/images/sida.jpg"  alt="logo" width="421" height="65"  />
-</div>
-
-<div>
-<table height="7%"  style=" height:5%; width:100%; border: solid #013;">
-  <td style="width: 100%; font-size: 18px; color: #013;" align="center">&nbsp;</td>
-</table>
-<table style=" height:10%; width:100%; border: solid #013;">
-
-<tr align="center">
-<td  align="center" bgcolor="#999999"><strong><em>Profesionistas</em></strong></td>
-<td  align="center"><strong><em>Proveedores</em></strong></td>
-<td align="center"><strong><em>Presupuestos</em></strong></td></tr>
-</table>
-</div>
+ 
 <br>
 
 <hr>
-            <form class="form-horizontal">
+<form class="form-horizontal" method="post" action="<?php  echo base_url() ?>index.php/Agregar">
                 <fieldset>
 
                     <!-- Form Name -->
@@ -31,20 +16,20 @@
                         <div class="form-group">
                             <label class="col-xs-6 control-label" for="nombre">Nombre</label>  
                             <div class="col-xs-6">
-                                <input id="nombre" name="nombre" type="text" placeholder="" class="form-control input-md" >
+                                <input id="nombre" name="nombre" type="text" placeholder="" class="form-control input-md" required >
 
                             </div>
                         </div>
-
+<br><br>
                         <!-- Text input-->
                         <div class="form-group">
                             <label class="col-xs-6 control-label" for="apellidos">Apellidos</label>  
                             <div class="col-xs-6">
-                                <input id="apellidos" name="apellidos" type="text" placeholder="" class="form-control input-md" >
+                                <input id="apellidos" name="apellidos" type="text" placeholder="" class="form-control input-md" required>
 
                             </div>
                         </div>
-
+<br><br>
                         <!-- Text input-->
                         <div class="form-group">
                             <label class="col-xs-6 control-label" for="mail">E-mail</label>  
@@ -53,7 +38,7 @@
 
                             </div>
                         </div>
-
+<br><br>
                         <!-- Text input-->
                         <div class="form-group">
                             <label class="col-xs-6 control-label" for="paginaWeb">Página Web</label>  
@@ -62,7 +47,7 @@
 
                             </div>
                         </div>
-
+<br><br>
                         <!-- Text input-->
                         <div class="form-group">
                             <label class="col-xs-6 control-label" for="skype">Skype</label>  
@@ -77,46 +62,67 @@
 
                         <!-- Text input-->
                        
-                      
+                      <br><br>
 
                         <!-- Text input--><!-- Text input-->
                         <div class="form-group">
                             <label class="col-xs-6 control-label" for="grado">Facebook</label>  
                             <div class="col-xs-6">
-                                <input id="grado" name="facebook" type="text" placeholder="" class="form-control input-md" >
+                                <input id="facebook" name="facebook" type="text" placeholder="" class="form-control input-md" >
 
                             </div>
                         </div>
-
+<br><br>
                         <!-- Text input-->
                         <div class="form-group">
                             <label class="col-xs-6 control-label" for="experiencia">Twitter</label>  
                             <div class="col-xs-6">
-                                <input id="twitter" name="experiencia" type="text" placeholder="" class="form-control input-md">
+                                <input id="twitter" name="twitter" type="text" placeholder="" class="form-control input-md">
 
                             </div>
                         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <hr></hr>
-<div class="col-xs-10" align="left">
+<div class="form-horizontal" align="left">
   <!-- Textarea --><h3>Direccion 1</h3>
   <div class="form-group">
     <label class="col-xs-3 control-label" for="municipio2">Calle  </label>
     <div class="col-xs-6">
-      <input id="calle1" name="calle1" type="text" placeholder="" class="form-control input-md">
+      <input id="calle1" name="calle1" type="text" placeholder="" class="form-control input-md" required>
     </div>
   </div>
   <!-- Text input-->
   <div class="form-group">
     <label class="col-xs-3 control-label" for="municipio1">Municipio</label>
     <div class="col-xs-6">
-      <input id="municipio1" name="municipio1" type="text" placeholder="" class="form-control input-md">
+      <input id="municipio1" name="municipio1" type="text" placeholder="" class="form-control input-md" required>
     </div>
   </div>
   <!-- Text input-->
   <div class="form-group">
     <label class="col-xs-3 control-label" for="estado2">Estado</label>
     <div class="col-xs-6">
-      <input id="estado1" name="estado1" type="text" placeholder="" class="form-control input-md" >
+      <input id="estado1" name="estado1" type="text" placeholder="" class="form-control input-md" required>
     </div>
   </div>
   
@@ -132,7 +138,7 @@
    <div class="form-group">
     <label class="col-xs-3 control-label" for="numext1">Número Exterior</label>
     <div class="col-xs-6">
-      <input id="numext1" name="numext1" type="text" placeholder="" class="form-control input-md" >
+      <input id="numext1" name="numext1" type="text" placeholder="" class="form-control input-md" required>
     </div>
   </div>
   
@@ -145,7 +151,7 @@
 </div>
                  
 
-                  <div class="col-xs-4" style="float:right; margin:40px;" >
+                  <div class="form-horizontal" style="float:right; margin:40px;" >
                             <!-- Text input-->
                             <div class="form-group">
                                 <label class="col-xs-6 control-label" for="telFijo">Tel. Casa</label>  
@@ -161,7 +167,7 @@
                             <div class="form-group">
                                 <label class="col-xs-6 control-label" for="movil">Móvil 1</label>  
                                 <div class="col-xs-6">
-                                    <input id="movil1" name="movil1" type="text" placeholder="" class="form-control input-md" >
+                                    <input id="movil1" name="movil1" type="text" placeholder="" class="form-control input-md" required >
 
                                 </div>
                             </div>
@@ -193,7 +199,7 @@
 
 
 
- <div class="col-xs-10">
+ <div class="form-horizontal">
                         <!-- Textarea --><h3>Dirección 2</h3>
                        <div class="form-group">
                             <label class="col-xs-4 control-label" for="calle2">Calle</label>  
@@ -210,7 +216,7 @@
                         <div class="form-group">
                             <label class="col-xs-4 control-label" for="municipio">Municipio</label>  
                             <div class="col-xs-8">
-                                <input id="municipio" name="municipio" type="text" placeholder="" class="form-control input-md" >
+                                <input id="municipio2" name="municipio2" type="text" placeholder="" class="form-control input-md" >
 
                             </div>
                         </div>
@@ -219,7 +225,7 @@
                         <div class="form-group">
                             <label class="col-xs-4 control-label" for="estado">Estado</label>  
                             <div class="col-xs-8">
-                                <input id="estado" name="estado" type="text" placeholder="" class="form-control input-md" >
+                                <input id="estado2" name="estado2" type="text" placeholder="" class="form-control input-md" >
 
                             </div>
                         </div>
@@ -254,41 +260,28 @@
                   </div>
                            
 <div style="float:none"></div>
-                    <!-- Button (Double) -->
+                  
                     <div  align="center" class="col-xs-12" style="float:right; margin:5px;">
                   <div class="form-group">
                             <label class="col-xs-6 control-label" for="guardar"></label>
                             <div>
-                                <button id="guardar" name="guardar" class="btn btn-primary">Guardar</button>                  
+                                <button   class="btn btn-primary" type="submit">Guardar</button>      </form>   <a href="Welcome">
+                                <button id="cancelar" name="cancelar" class="btn btn-danger">Cancelar</button>
+                              </a>
+                       
+                       
+                       
+                                       
+</div>
 </div>
 </div>
 
               </fieldset>
           
 
-          </form>
+          
                                 
-                              <a href="Welcome">
-                                <button id="cancelar" name="cancelar" class="btn btn-danger">Cancelar</button>
-                              </a>
-                           
-                       
-                              <a href="agregarobra">
-                              <button id="nuevaobra" name="nuevaobra" class="btn btn-success">Agregar Obra</button>
-                              </a>
-                           
-                        <a href="agregarcarrera">
-                            <button id="nuevacarrera" name="nuevacarrera" class="btn btn-success">Agregar carera</button>
-                         </a>
-                        
-                        
-                        
-                         <a href="agregarespecilidad">
-                            <label class="col-xs-6 control-label" for="nuevaespecialidad"></label>
-                          
-                              <button id="nuevaespecialidad" name="nuevaespecialidad" class="btn btn-success">Agregar especilidad</button></a>
-                       
-                        
+                            
 
         
 </section>

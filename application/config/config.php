@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://localhost/github/ERP/';
+$config['base_url']	= 'http://localhost/GitHub/ERP/';
 
 /*
 |--------------------------------------------------------------------------
