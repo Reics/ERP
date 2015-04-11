@@ -1,5 +1,5 @@
 <section>
-    <h2>Presupuestos</h2><hr>
+    <legend style="margin-top:20px;">Productos</legend>
     <table class="table table-striped" id="dataTable">
         <thead>    
             <tr>

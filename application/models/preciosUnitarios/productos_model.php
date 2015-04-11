@@ -25,7 +25,7 @@ class Productos_model extends CI_Model {
         return ($query->num_rows() > 0) ? $query->result_array() : NULL;
     }
 
-        public function get_all_categorias() {
+    public function get_all_categorias() {
         $categoria = $this->db->get('preciosunitarios');
         return ($categoria->num_rows() > 0) ? $categoria->result_array() : NULL;
     }

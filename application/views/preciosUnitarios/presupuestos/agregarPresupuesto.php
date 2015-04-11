@@ -1,9 +1,8 @@
-  <section>
-    <div class="col-md-8">
-    </div>
+<section>
 
+<legend style="margin-top:20px;">Agregar Presupuestos</legend>
+    
     <form class="form-horizontal" id="formAgregarPresupuesto" action="<?= site_url() ?>/preciosUnitarios/presupuestos/set" method="POST">
-    <legend style="color:#FFFFFF">Agregar presupuestos</legend>
 
       <div class="form-group">
         <label class="col-md-2 control-label etiquetas" for="Contratista">Contratista</label>  

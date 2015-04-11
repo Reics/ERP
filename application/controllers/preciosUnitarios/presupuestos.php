@@ -44,12 +44,12 @@ class Presupuestos extends CI_Controller {
     public function set() {
         $data = $this->input->post();
         $this->presupuestos_model->set($data);
-        redirect('preciosunitarios/presupuestos');
+        redirect('preciosUnitarios/presupuestos');
     }
     
        public function delete($id) {
         $this->presupuestos_model->delete($id);
-        redirect('preciosunitarios/presupuestos');
+        redirect('preciosUnitarios/presupuestos');
     }
 
     public function update_form() {

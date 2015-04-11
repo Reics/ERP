@@ -1,7 +1,4 @@
-<?php
-
-if (!defined('BASEPATH'))
-    exit('No direct script access allowed');
+<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
 class Productos extends CI_Controller {
 
@@ -44,11 +41,12 @@ class Productos extends CI_Controller {
     public function set() {
         $data = $this->input->post();
         $this->productos_model->set($data);
-        redirect('preciosunitarios/productos');
+        redirect('preciosUnitarios/productos');
     }
+
     public function delete($id) {
         $this->productos_model->delete($id);
-        redirect('preciosunitarios/productos');
+        redirect('preciosUnitarios/productos');
     }
 
     public function update_form($id) {
@@ -86,7 +84,7 @@ class Productos extends CI_Controller {
     public function update() {
         $data = $this->input->post();
         $this->productos_model->update($data);
-        redirect('preciosunitarios/productos');
+        redirect('preciosUnitarios/productos');
     }
 
 }

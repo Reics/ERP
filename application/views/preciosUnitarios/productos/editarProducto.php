@@ -1,6 +1,8 @@
 <section>
-    <h2>Editar Producto</h2><hr>
-    <form class="form-group" id="formEditarProducto" action="<?= site_url() ?>/preciosUnitarios/productos/update" method="POST">
+    
+    <legend style="margin-top:20px;">Agregar Producto</legend>
+
+    <form class="form-group" id="formEditarProducto" style="margin-left:100px;" action="<?= site_url() ?>/preciosUnitarios/productos/update" method="POST">
         <input hidden name="idPreciosUnitarios" value="<?= $idPreciosUnitarios ?>">
         <div class="row">
             <div class="col-lg-9">
@@ -9,7 +11,7 @@
                 <br>
             </div>
 
-            <div class="form-group col-md-8">
+            <div class="form-group col-md-9">
                 <label class="control-label etiquetas" for="unidadMedida" style="padding-left: 0px; padding-right: 0px;">Unidad</label>
                 <select id="unidadMedida" name="unidadMedida" class="form-control">
                     <option value="<?=$unidadMedida ?>"><?= $unidadMedida ?></option>
@@ -20,12 +22,12 @@
                 </select>
             </div>
 
-            <div class="form-group col-md-8">
+            <div class="form-group col-md-9">
                 <label class="col-md-2 control-label etiquetas" for="Precio unitario" style="width: 150px; padding-left: 0px; padding-right: 0px;">Precio unitario  $</label>  
                 <input id="precioUnitario" name="precioUnitario" type="text" placeholder="Precio" class="form-control input-md" required="" autofocus required value="<?= $precioUnitario ?> ">
             </div>
 
-            <div class="form-group col-md-8">
+            <div class="form-group col-md-9">
                 <label class="col-md-2 control-label etiquetas" for="Categoria" style="padding-left: 0px; padding-right: 0px;">Categoria</label>
                 <select id="idCategoria" name="idCategoria" class="form-control">
                     <option value="<?= $idCategoria ?>"><?= $idCategoria ?></option>
@@ -34,10 +36,10 @@
                     <option value="3">Instalaciones</option>
                 </select>
             </div>
-            <div class="col-md-8" style="margin-left:100px;">
+            <div class="col-md-4" style="margin-left:600px;">
                 <div class="row">
-                    <button type="submit" id="Guardar" name="Guardar" class="btn btn-success" >Guardar</button>
-                    <button id="Cancelar" name="Cancelar" class="btn btn-danger" style=" margin-left: 175px;">Cancelar</button>
+                    <button type="submit" class="btn btn-success" style="width: 86px;" >Guardar</button></form>
+                    <a type="button" class="btn btn-danger" style="margin-left:10px; width: 86px;" href="<?php echo site_url("preciosUnitarios/productos"); ?>">Cancelar</a>
                 </div>
             </div>
         </div>
