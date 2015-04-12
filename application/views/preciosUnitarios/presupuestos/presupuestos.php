@@ -1,5 +1,6 @@
 <section>
     <legend style="margin-top:20px;">Productos</legend>
+    
     <table class="table table-striped" id="dataTable">
         <thead>    
             <tr>
@@ -38,7 +39,7 @@
 
     <hr> <!-- Botones -->
     <div align="right">
-        <button type="button" class="btn btn-danger">Salir</button>
+        <a type="button" class="btn btn-danger" href="<?php echo site_url("menu/preciosUnitarios/"); ?>">Salir</a>
         <a type="button" class="btn btn-primary" href="<?php echo site_url("preciosUnitarios/presupuestos/set_form"); ?>" >Agregar Presupuesto</a>
     </div>
 </section>

@@ -1,10 +1,9 @@
 <section>
 
-<!-- NOMBRE DE LA VISTA -->
-
-<legend style="color:#black">Editar presupuesto</legend>
-<form class="form-horizontal">
-    <div class="form-group">
+  <legend style="margin-top:20px;">Agregar Presupuesto</legend>
+  
+  <form class="form-horizontal">
+  <div class="form-group">
 
 
 
