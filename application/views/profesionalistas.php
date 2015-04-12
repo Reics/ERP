@@ -39,7 +39,7 @@
     <td><?php echo $fila->movil1; ?></td>
     
     <td>
-      <form name="form1" method="post" action="<?php echo base_url(); ?>/index.php/ver/vermas" >
+      <form name="form1" method="post" action="<?php echo base_url(); ?>index.php/ver/vermas" >
           <button id="vermas" name="id" class="btn btn-primary btn-s" type="submit" value="<?php echo $dato?>"> <span class="glyphicon glyphicon-star"></span> Ver Más </button>
       </form>
     </td>
