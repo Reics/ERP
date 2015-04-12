@@ -1,71 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-       <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0-rc2/js/bootstrap.min.js"></script>
-    <script src="jquery.tablesorter.min.js"></script>
-    <script type="text/javascript" src="/path/to/jquery-latest.js"></script> 
-<script type="text/javascript" src="/path/to/jquery.tablesorter.js"></script>
-    <link href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0-rc2/css/bootstrap.css" rel="stylesheet" media="screen">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <style>
-        #map-canvas {
-            width: 600px;
-            height: 400px;
-            background-color: #CCC;
-        }
-    </style>
-    !-- choose a theme file -->
-<link rel="stylesheet" href="/path/to/theme.default.css">
-<!-- load jQuery and tablesorter scripts -->
-<script type="text/javascript" src="/path/to/jquery-latest.js"></script>
-<script type="text/javascript" src="/path/to/jquery.tablesorter.js"></script>
-
-<!-- tablesorter widgets (optional) -->
-<script type="text/javascript" src="/path/to/jquery.tablesorter.widgets.js"></script>
-<script>
-$(document).ready(function() {
-    $("#styling").tableSorter({
-        sortColumn: 'Proovedor',           // número entero del índice o nombre de la columna en minúsculas
-        sortClassAsc: 'headerSortUp',       // clase css de la cabecera de la columna cuando aplicamos un orden ascendente
-        sortClassDesc: 'headerSortDown',    // clase css de la cabecera de la columna cuando aplicamos un orden descendente
-        headerClass: 'header'           // clase genérica de las cabeceras (th's)
-        sortColumn: 'Provincia',           // número entero del índice o nombre de la columna en minúsculas
-        sortClassAsc: 'headerSortUp',       // clase css de la cabecera de la columna cuando aplicamos un orden ascendente
-        sortClassDesc: 'headerSortDown',    // clase css de la cabecera de la columna cuando aplicamos un orden descendente
-        headerClass: 'header'  
-        sortColumn: 'códio de proovedor',           // número entero del índice o nombre de la columna en minúsculas
-        sortClassAsc: 'headerSortUp',       // clase css de la cabecera de la columna cuando aplicamos un orden ascendente
-        sortClassDesc: 'headerSortDown',    // clase css de la cabecera de la columna cuando aplicamos un orden descendente
-        headerClass: 'header'  
-        sortColumn: 'categoría',           // número entero del índice o nombre de la columna en minúsculas
-        sortClassAsc: 'headerSortUp',       // clase css de la cabecera de la columna cuando aplicamos un orden ascendente
-        sortClassDesc: 'headerSortDown',    // clase css de la cabecera de la columna cuando aplicamos un orden descendente
-        headerClass: 'header'  
-    });
-});
-</script>
-
-    <script src="https://maps.googleapis.com/maps/api/js"></script>
-    <script>
-            function initialize() {
-                
-                var mapCanvas = document.getElementById('map-canvas');
-                var mapOptions = {
-                    center: new google.maps.LatLng(44.5403, -78.5463),
-                    zoom: 8,
-                    mapTypeId: google.maps.MapTypeId.ROADMAP
-                }
-                var map = new google.maps.Map(mapCanvas, mapOptions)
-            }
-            google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -74,11 +9,6 @@ $(document).ready(function() {
 
     <!-- Bootstrap -->
     <link href="<?php echo base_url("assets/css/bootstrap.min.css");?>" rel="stylesheet">
-
-    <!--jQuery-->
-
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/jquery-ui-1.11.4/jquery-ui.css");?>"/>
-    <script src="<?php echo base_url("assets/jquery-ui-1.11.4/jquery-ui.js");?>"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
