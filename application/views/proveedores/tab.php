@@ -4,6 +4,7 @@
             <li class="active"><a data-toggle="tab" href="#fichas">Fichas</a></li>
             <li><a data-toggle="tab" href="#contactos">Contactos</a></li>
             <li><a data-toggle="tab" href="#mapas">Mapas</a></li>
+            <li><a data-toggle="tab" href="#mapas">Mapas</a></li>
         </ul>
 
         <div class="tab-content">
