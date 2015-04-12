@@ -7,6 +7,7 @@ class Listado extends CI_Controller {
         { 
             parent::__construct();
             $this->load->helper('url'); 
+             $this->output->enable_profiler(TRUE);
         }
 
 
@@ -21,7 +22,23 @@ class Listado extends CI_Controller {
 		$this->load->database();
         $this->load->model('proovedores');
         $x['proovedores'] = $this->proovedores->get_proovedores();
-		$this->load->view('proveedores/listado',$x);
+        $this->load->view('proveedores/listado',$x);
+
+		/*Se cierra el body y el html, y se agregan los js de bootstrap*/
+		$this->load->view('template/footer');
+	}
+
+	public function borrarcontacto()
+	{
+		$data['header'] = array('title' => 'Listado' , 'proveedores' => 'active' , 'presupuestos' => '' , 'profecionistas' => '' );//se inicializa el titulo de la pagina
+
+		/*Habre el html y el body, y carga el header junto con el css de bootstrap*/
+		$this->load->view('template/header', $data);
+
+		/*carga el contenido de la pagina*/
+        $this->load->model('proovedores');
+        $x['proovedores'] = $this->proovedores->get_contactos_mostrar();
+        $this->load->view('proveedores/contactosmostrar',$x);
 
 		/*Se cierra el body y el html, y se agregan los js de bootstrap*/
 		$this->load->view('template/footer');
@@ -50,8 +67,9 @@ class Listado extends CI_Controller {
 		$this->load->view('template/header', $data);
 
 		/*carga el contenido de la pagina*/
-
-		$this->load->view('proveedores/contacto');
+		$this->load->model('proovedores');
+		$x['proovedores'] = $this->proovedores->get_proovedores_id($id);
+		$this->load->view('proveedores/agregarproovedor',$x);
 
 		/*Se cierra el body y el html, y se agregan los js de bootstrap*/
 		$this->load->view('template/footer');
@@ -63,11 +81,18 @@ class Listado extends CI_Controller {
 
 		/*Habre el html y el body, y carga el header junto con el css de bootstrap*/
 		$this->load->view('template/header', $data);
-
 		/*carga el contenido de la pagina*/
 		$this->load->model('proovedores');
 		$x['proovedores'] = $this->proovedores->get_contactos($id);
-		$this->load->view('proveedores/contactos',$x);
+
+		if($x['proovedores'] != null){
+			$this->load->view('proveedores/contactos',$x);
+			
+        }
+        else{
+			$this->load->view('proveedores/nocontactos');
+		}
+		
 
 		/*Se cierra el body y el html, y se agregan los js de bootstrap*/
 		$this->load->view('template/footer');
@@ -85,6 +110,22 @@ class Listado extends CI_Controller {
 		$this->load->model('proovedores');
 		$x['proovedores'] = $this->proovedores->get_direccion($id);
 		$this->load->view('proveedores/mapa',$x);
+
+		/*Se cierra el body y el html, y se agregan los js de bootstrap*/
+		$this->load->view('template/footer');
+	}
+
+	public function elegircontactovista($id)
+	{
+		$data['header'] = array('title' => 'Listado' , 'proveedores' => 'active' , 'presupuestos' => '' , 'profecionistas' => '' );//se inicializa el titulo de la pagina
+
+		/*Habre el html y el body, y carga el header junto con el css de bootstrap*/
+		$this->load->view('template/header', $data);
+
+		$this->load->model('contactos');
+		$x['hola'] = $this->contactos->get_contactos();
+		/*carga el contenido de la pagina*/
+		$this->load->view('proveedores/agregarcontacto 2',$x);
 
 		/*Se cierra el body y el html, y se agregan los js de bootstrap*/
 		$this->load->view('template/footer');
@@ -112,10 +153,95 @@ class Listado extends CI_Controller {
 		$this->load->view('template/footer');
 	}
 
-	public function update(){
+	public function update($id){
 		$data = $this->input->post();
+		$nombre = $this->input->post("Nombre");
+
+		$this->load->model('procon');
+		$df = $this->procon->checarupdatec($nombre);
+
+		if($df == null){
 		$this->load->model('proovedores');
-		$this->proovedores->update_contacto($data);
+		$this->proovedores->update_contacto($data,$id);
+		redirect('proveedores/listado/');
+		}
+		else{
+
+			$data['header'] = array('title' => 'Listado' , 'proveedores' => 'active' , 'presupuestos' => '' , 'profecionistas' => '' );//se inicializa el titulo de la pagina
+
+		/*Habre el html y el body, y carga el header junto con el css de bootstrap*/
+		$this->load->view('template/header', $data);
+
+		$this->load->view('proveedores/errorcontacto');
+
+		$this->load->view('template/footer');
+
+		}
+	}
+
+	public function insert(){
+		$data = $this->input->post();
+		$nombre = $this->input->post('Nombre');
+
+		$this->load->model('procon');
+		$df = $this->procon->checarupdate($nombre);
+		
+		
+
+		if($df == null){
+			$this->load->model('proovedores');
+		$this->proovedores->insert_proveedor($data);
+		redirect('proveedores/listado');
+		}
+		else{
+			$data['header'] = array('title' => 'Listado' , 'proveedores' => 'active' , 'presupuestos' => '' , 'profecionistas' => '' );//se inicializa el titulo de la pagina
+
+		/*Habre el html y el body, y carga el header junto con el css de bootstrap*/
+		$this->load->view('template/header', $data);
+
+		$this->load->view('proveedores/errorproovedor');
+
+		$this->load->view('template/footer');
+
+		}
+	}
+
+	public function update_proveedor($id){
+		$nombre = $this->input->post('Nombre');
+		$data = $this->input->post();
+
+		
+		$this->load->model('procon');
+		$df = $this->procon->checarupdate($nombre);
+
+		if($df == null){
+			$this->load->model('proovedores');
+		$this->proovedores->update_proveedor($data,$id);
+		redirect('proveedores/listado');
+		}
+		else{
+			$data['header'] = array('title' => 'Listado' , 'proveedores' => 'active' , 'presupuestos' => '' , 'profecionistas' => '' );//se inicializa el titulo de la pagina
+
+		/*Habre el html y el body, y carga el header junto con el css de bootstrap*/
+		$this->load->view('template/header', $data);
+
+		$this->load->view('proveedores/errorproovedor');
+
+		$this->load->view('template/footer');
+
+		}
+	}
+
+	public function addcontacto($id){
+		$data = $this->input->post();
+
+	/*
+		$this->load->model('proovedores');
+		$con = $this->proovedores->suma_contactos();
+*/
+		$this->load->model('proovedores');
+		$this->proovedores->add_contacto($data,$id/*,$con*/);
+
 		redirect('proveedores/listado');
 	}
 }

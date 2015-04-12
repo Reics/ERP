@@ -8,26 +8,26 @@
             <th>Co.</th>
             <th>Proovedor</th>
             <th>RFC</th>
-            <th>Pais</th>
+            <th>Direccion</th>
             <th>Estado</th>
-            <th>Categoría</th>
+            <th>Pais</th>
         </tr>   
     </thead>
     <tbody>
         <?php if ($proovedores != NULL) {
                 foreach ($proovedores as $c): ?>
         <tr>
-            <td><?php echo $c['idProovedor']?></td>
-            <td><a href="<?=site_url()?>/proveedores/listado/datos/<?=$c['idProovedor']?>"><?php echo $c['Nombre']?></a></td>
+            <td><?php echo $c['idContacto']?></td>
+            <td><?php echo $c['Nombre']?></a></td>
             <td><?php echo $c['RFC']?></td>
-            <td><?php echo $c['Pais']?></td>
+            <td><?php echo $c['Direccion']?></td>
             <td><?php echo $c['Estado']?></td>
-            <td><?php echo $c['Categoria']?></td>
+            <td><?php echo $c['Pais']?></td>
             <td>
-                <a type='button' class='btn btn-default' aria-label='Left Align' href="<?=site_url()?>/proveedores/listado/contacto/<?=$c['idProovedor']?>">
+                <a type='button' class='btn btn-default' aria-label='Left Align' href="<?=site_url()?>/proveedores/borrarcontacto/aecontacto/<?=$c['idContacto']?>">
                     <span class='glyphicon glyphicon-edit' aria-hidden='true'></span>
                 </a>
-                <a type='button' class='btn btn-default' aria-label='Left Align' href="<?=site_url()?>/proveedores/listado/borrar/<?=$c['idProovedor']?>">
+                <a type='button' class='btn btn-default' aria-label='Left Align' href="<?=site_url()?>/proveedores/borrarcontacto/borrar/<?=$c['idContacto']?>">
                     <span class='glyphicon glyphicon-remove' aria-hidden='true'></span>
                 </a>
             </td>
@@ -36,6 +36,12 @@
     
     </tbody>
 </table>
+
+ <div class="col-sm-offset-8 col-sm-10">
+<a role="button" class="btn btn-success" href="<?=site_url()?>/proveedores/borrarcontacto/agregarcontacto/">Agregar Contacto</a>
+                </div>
+
+                
     </div>
 
     <br>

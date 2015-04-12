@@ -18,7 +18,7 @@ class Contacto extends CI_Controller {
 		$this->load->view('template/header', $data);
 
 		/*carga el contenido de la pagina*/
-		$this->load->view('proveedores/contacto');
+		$this->load->view('proveedores/agregarcontacto');
 
 		/*Se cierra el body y el html, y se agregan los js de bootstrap*/
 		$this->load->view('template/footer');
@@ -32,7 +32,7 @@ class Contacto extends CI_Controller {
 		$this->load->view('template/header', $data);
 
 		/*carga el contenido de la pagina*/
-		$this->load->view('proveedores/agregareditarcontacto');
+		$this->load->view('proveedores/agregarcontacto');
 
 		/*Se cierra el body y el html, y se agregan los js de bootstrap*/
 		$this->load->view('template/footer');

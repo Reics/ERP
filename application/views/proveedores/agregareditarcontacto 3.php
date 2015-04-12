@@ -1,7 +1,7 @@
 
 <section>
     <?php foreach ($proovedores as $e): ?>
-    <form class="form-inline" method="POST" action="<?=site_url()?>/proveedores/listado/update/<?=$e['idContacto']?>">
+    <form class="form-inline" method="POST" action="<?=site_url()?>/proveedores/borrarcontacto/update/<?=$e['idContacto']?>">
         <?php break; endforeach?> 
   <div class="form-group">
     
@@ -55,13 +55,12 @@
 <br>
   <div class="col-sm-offset-8 col-sm-10">
 <button type="submit" class="btn btn-success">Guardar</button>
-<a type="button" class="btn btn-danger" href="<?=site_url()?>/proveedores/listado/">Cancelar</a>
+<a type="button" class="btn btn-danger" href="<?=site_url()?>/proveedores/borrarcontacto/">Cancelar</a>
 </div>
 
 
 </div>
-</form> 
-
+</form>   
 <br>
                     <br>
                     <div style="float:center;" class="col-sm-offset-8 col-sm-10">
