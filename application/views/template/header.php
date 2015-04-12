@@ -35,7 +35,7 @@
     <ul class="nav nav-pills nav-justified">
       <li role="presentation" class="<?php echo $header['profecionistas'];?>"><a href="<?php echo site_url("welcome");?>">Profesionistas</a></li>
       <li role="presentation" class="<?php echo $header['proveedores'];?>"><a href="<?php echo site_url("menu/proveedores");?>">Proveedores</a></li>
-      <li role="presentation" class="<?php echo $header['presupuestos'];?>"><a href="<?php echo site_url("menu/preciosUnitarios");?>">Presupuestos</a></li>
+      <li role="presentation" class="<?php echo $header['presupuestos'];?>"><a href="<?php echo site_url("menu/preciosUnitarios");?>">Precios Unitarios</a></li>
     </ul>
   </td>
 </table>

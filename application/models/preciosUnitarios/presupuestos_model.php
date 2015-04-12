@@ -32,4 +32,8 @@ class Presupuestos_Model extends CI_Model {
         $query = $this->db->get_where('detalle_presupuesto', array('idPresupuesto'=>$id));
         return ($query->num_rows() > 0) ? $query->result_array() : NULL;
     }
+
+    public function setProducto($data) {
+        $this->db->insert('detalle_presupuesto', $data);
+    }
 }

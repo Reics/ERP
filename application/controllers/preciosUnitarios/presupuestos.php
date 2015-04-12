@@ -114,4 +114,27 @@ class Presupuestos extends CI_Controller {
 
         $this->load->view('template/footer');
     }
+
+    public function agregarProducto() {
+        $data['header'] = array('title' => 'Agregar Producto Presupuesto', 'proveedores' => '', 'presupuestos' => 'active', 'profecionistas' => ''); //se inicializa el titulo de la pagina
+
+        $productos = array(
+            'producto' => $this->productos_model->get_all()
+        );
+        /* Habre el html y el body, y carga el header junto con el css de bootstrap */
+        $this->load->view('template/header', $data);
+
+        /* carga el contenido de la pagina */
+        $this->load->view('preciosUnitarios/presupuestos/agregarProductoPresupuesto',$productos);
+
+        /* Se cierra el body y el html, y se agregan los js de bootstrap */
+        $this->load->view('template/footer');
+    }
+
+    public function setProducto() {
+        $data = $this->input->post();
+        $this->presupuestos_model->set($data);
+        redirect('preciosUnitarios/presupuestos');
+    }
+
 }
