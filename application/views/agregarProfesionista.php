@@ -5,7 +5,7 @@
 <br>
 
 <hr>
-<form class="form-horizontal" method="post" action="<?php  echo base_url() ?>index.php/Agregar">
+<form class="form-horizontal" method="post" action="<?php  echo base_url() ?>index.php/agregar">
                 <fieldset>
 
                     <!-- Form Name -->
@@ -260,17 +260,17 @@
                   </div>
                            
 <div style="float:none"></div>
-                  
+        <div style="float:right;" >          
                     <div  align="center" class="col-xs-12" style="float:right; margin:5px;">
                   <div class="form-group">
                             <label class="col-xs-6 control-label" for="guardar"></label>
                             <div>
-                                <button   class="btn btn-primary" type="submit">Guardar</button>      </form>   <a href="Welcome">
+                                <button   class="btn btn-primary" type="submit">Guardar</button>      </form>   <a href="<?php echo base_url(); ?>index.php/welcome">
                                 <button id="cancelar" name="cancelar" class="btn btn-danger">Cancelar</button>
                               </a>
                        
                        
-                       
+                 </div>      
                                        
 </div>
 </div>

@@ -1,14 +1,12 @@
 <section>
 
-<legend style="margin-top:20px;">Agregar Presupuestos</legend>
-    <form class="form-horizontal" id="formEditarPresupuesto" action="<?= site_url() ?>/preciosUnitarios/presupuestos/update" method="POST">
-      <input hidden name="idPresupuesto" value="<?= $idPresupuesto ?>">
-      <div class="form-group">
-        <label class="col-md-2 control-label etiquetas" for="Contratista">Contratista</label>  
-        <div class="col-md-8">
-          <input id="contratista" name="contratista" type="text" placeholder="Nombre del contratista" class="form-control input-md" required=""autofocus required value="<?= $contratista ?>">
-        </div>  
-      </div>
+
+  <legend style="margin-top:20px;">Agregar Presupuesto</legend>
+  
+  <form class="form-horizontal">
+  <div class="form-group">
+
+
 
       <div class="form-group">
         <label class="col-md-2 control-label etiquetas" for="Obra">Obra</label>  

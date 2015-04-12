@@ -39,7 +39,7 @@
     <td><?php echo $fila->movil1; ?></td>
     
     <td>
-      <form name="form1" method="post" action="<?php echo base_url(); ?>/index.php/ver/vermas" >
+      <form name="form1" method="post" action="<?php echo base_url(); ?>index.php/ver/vermas" >
           <button id="vermas" name="id" class="btn btn-primary btn-s" type="submit" value="<?php echo $dato?>"> <span class="glyphicon glyphicon-star"></span> Ver Más </button>
       </form>
     </td>
@@ -93,10 +93,10 @@
 </div>
 <br /><br /><br /><br />
 <div align="center">
-<a href="Nuevo">
+<a href="<?php echo base_url(); ?>index.php/nuevo">
 <button name="agregar" class="btn btn-primary" style=" alignment-adjust:middle; margin:5px; width:150px" >Agregar nuevo</button>
 </a>
-<a href="<?php echo base_url(); ?>index.php/Welcome">
+<a href="<?php echo base_url(); ?>index.php/welcome">
 <button name="cerrar" class="btn btn-danger" style=" alignment-adjust:middle; width:150px;">Cerrar</button>
 </a>
 </div>

@@ -15,14 +15,14 @@ $this->load->helper('url');
 		$data['header'] = array('title' => 'Proveedores' , 'proveedores' => '' , 'presupuestos' => '' , 'profecionistas' => 'active' );//se inicializa el titulo de la pagina
 		$id=$this->input->post('id');
 		/*Habre el html y el body, y carga el header junto con el css de bootstrap*/
-		$this->load->view('header', $data);
+		$this->load->view('template/header', $data);
  		$this->load->model('mvermas');
         $variable['registros'] = $this->mvermas->vermasprof($id);
 		/*carga el contenido de la pagina*/
 		$this->load->view('agregarcarrera',$variable);
 
 		/*Se cierra el body y el html, y se agregan los js de bootstrap*/
-		$this->load->view('footer');
+		$this->load->view('template/footer');
 	
 	}
 	public function insertar()

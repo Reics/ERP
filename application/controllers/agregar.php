@@ -49,9 +49,9 @@ $this->load->model('profesionista_model');
  if ($bool==1)
     {
     	$data['header'] = array('title' => 'Proveedores' , 'proveedores' => '' , 'presupuestos' => '' , 'profecionistas' => 'active' );//se inicializa el titulo de la pagina
-  		$this->load->view('header', $data);
+  		$this->load->view('template/header', $data);
 		$this->load->view('agregarProfesionista');
-		$this->load->view('footer');
+		$this->load->view('template/footer');
     }else
     {
     $this->profesionista_model->set($nombre, $apellido,$mail,$paginaWeb,$skype,$facebook,$twitter,$calle1,$municipio1,$estado1,$numint1,$numext1,$telCasa,$movil1,$movil2,$telOficina,$calle2,$municipio2,$estado2,$numint2,$numext2); 

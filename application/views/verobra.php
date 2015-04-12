@@ -21,7 +21,7 @@
     <td><?php echo $fila->Nombre; $dato=$fila->ID_Obra; ?></td>
     <td><?php echo $fila->Fecha_de_inicio; ?></td>
     <td><?php echo $fila->Fecha_de_termino; ?></td> 
-    <td> <form name="form1" method="post" action="<?php echo base_url(); ?>index.php/Agregarobra/eliminarobra" >
+    <td> <form name="form1" method="post" action="<?php echo base_url(); ?>index.php/agregarobra/eliminarobra" >
           <button id="elimina" name="elimina" class="btn btn-danger btn-s" type="submit" value="<?php echo $dato?>"> <span class="glyphicon glyphicon-star"></span> Eliminar </button>
       </form></td>    
   </tr>
