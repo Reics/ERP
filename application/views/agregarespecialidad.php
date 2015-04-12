@@ -7,7 +7,7 @@
 <h3	align="center">Nueva Especialidad</h3>
 <hr />
 <fieldset>
-<form class="form-horizontal" method="post" action="<?php  echo base_url() ?>index.php/Agregarespecialidad/insertaresp">
+<form class="form-horizontal" method="post" action="<?php  echo base_url() ?>index.php/agregarespecialidad/insertaresp">
  <?php foreach ($registros as $fila) {                  ?>
   <?php  $id=$fila->ID_Profesionistas; ?>
   <?php }?>

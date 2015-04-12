@@ -26,7 +26,7 @@
     <td><?php echo $fila->especialidad; ?></td>
     <td><?php echo $fila->años; ?></td>
     <td><?php echo $fila->cedula; ?></td>
-    <td><form name="form1" method="post" action="<?php echo base_url(); ?>index.php/Agregarcarrera/eliminarcarrera" >
+    <td><form name="form1" method="post" action="<?php echo base_url(); ?>index.php/agregarcarrera/eliminarcarrera" >
           <button id="elimina" name="elimina" class="btn btn-danger btn-s" type="submit" value="<?php echo $dato?>"> <span class="glyphicon glyphicon-star"></span> Eliminar </button>
       </form></td>
     </tr> 

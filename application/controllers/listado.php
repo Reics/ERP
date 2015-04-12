@@ -14,7 +14,7 @@ class Listado extends CI_Controller {
     public function index() {
        $data['header'] = array('title' => 'Proveedores' , 'proveedores' => '' , 'presupuestos' => '' , 'profecionistas' => 'active' );//se inicializa el titulo de la pagina
         /* Habre el html y el body, y carga el header junto con el css de bootstrap */
-        $this->load->view('header', $data);
+        $this->load->view('template/header', $data);
         //se carga en memoria
         $this->load->model('listado_p');
         //mostrarlo-devuelve datos
@@ -23,13 +23,13 @@ class Listado extends CI_Controller {
         $this->load->view('profesionalistas', $variable);
         //$this->load->view('profesionalistas');
         /* Se cierra el body y el html, y se agregan los js de bootstrap */
-        $this->load->view('footer');
+        $this->load->view('template/footer');
     }
     public function verEspecialidad()
 	{
 	$data['header'] = array('title' => 'Proveedores' , 'proveedores' => '' , 'presupuestos' => '' , 'profecionistas' => 'active' );//se inicializa el titulo de la pagina
                 /*Habre el html y el body, y carga el header junto con el css de bootstrap*/
-                $this->load->view('header', $data);
+                $this->load->view('template/header', $data);
                 $id = $this->input->post('id');
                 $this->load->model('listado_p');
                 $variable['registros'] = $this->listado_p->verEsp($id);
@@ -37,27 +37,27 @@ class Listado extends CI_Controller {
 		/*carga el contenido de la pagina*/
 		$this->load->view('verespecialidad',$variable);
 		/*Se cierra el body y el html, y se agregan los js de bootstrap*/
-		$this->load->view('footer');
+		$this->load->view('template/footer');
 	}
 
         public function verCarrera()
 	{
 		$data['header'] = array('title' => 'Proveedores' , 'proveedores' => '' , 'presupuestos' => '' , 'profecionistas' => 'active' );//se inicializa el titulo de la pagina
                 /*Habre el html y el body, y carga el header junto con el css de bootstrap*/
-                $this->load->view('header', $data);
+                $this->load->view('template/header', $data);
                 $id = $this->input->post('id');
                 $this->load->model('listado_p');
                 $variable['registros'] = $this->listado_p->verCar($id);
                 $variable['id'] = $id;
                 $this->load->view('vercarrera',$variable); //bn
-                $this->load->view('footer');
+                $this->load->view('template/footer');
 	}
         
         public function verObras()
 	{
 	$data['header'] = array('title' => 'Proveedores' , 'proveedores' => '' , 'presupuestos' => '' , 'profecionistas' => 'active' );//se inicializa el titulo de la pagina
                 /*Habre el html y el body, y carga el header junto con el css de bootstrap*/
-                $this->load->view('header', $data);
+                $this->load->view('template/header', $data);
                 $id = $this->input->post('id');
                 $this->load->model('listado_p');
                 $variable['registros'] = $this->listado_p->verObra($id);
@@ -65,13 +65,13 @@ class Listado extends CI_Controller {
 		/*carga el contenido de la pagina*/
 		$this->load->view('verobra',$variable);
 		/*Se cierra el body y el html, y se agregan los js de bootstrap*/
-		$this->load->view('footer');
+		$this->load->view('template/footer');
 	}
         
         public function vermas(){
            $data['header'] = array('title' => 'Proveedores' , 'proveedores' => '' , 'presupuestos' => '' , 'profecionistas' => 'active' );//se inicializa el titulo de la pagina
         /* Habre el html y el body, y carga el header junto con el css de bootstrap */
-        $this->load->view('header', $data);
+        $this->load->view('template/header', $data);
         $id = $this->input->post('id');
         //se carga en memoria
         $this->load->model('mvermas');//mostrarlo-devuelve datos
@@ -80,13 +80,13 @@ class Listado extends CI_Controller {
         /* carga el contenido de la pagina */
         $this->load->view('vermas', $variable);
         /* Se cierra el body y el html, y se agregan los js de bootstrap */
-		$this->load->view('footer');
+		$this->load->view('template/footer');
         }
 
  public function modifica(){
        $data['header'] = array('title' => 'Proveedores' , 'proveedores' => '' , 'presupuestos' => '' , 'profecionistas' => 'active' );//se inicializa el titulo de la pagina
         /* Habre el html y el body, y carga el header junto con el css de bootstrap */
-        $this->load->view('header', $data);
+        $this->load->view('template/header', $data);
         $id = $this->input->post('id');
         //se carga en memoria
         $this->load->model('mvermas');//mostrarlo-devuelve datos
@@ -95,7 +95,7 @@ class Listado extends CI_Controller {
         /* carga el contenido de la pagina */
         $this->load->view('vermass', $variable);
         /* Se cierra el body y el html, y se agregan los js de bootstrap */
-        $this->load->view('footer');
+        $this->load->view('template/footer');
     }
     public function modificarya(){
         /* Habre el html y el body, y carga el header junto con el css de bootstrap */

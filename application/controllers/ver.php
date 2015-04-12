@@ -9,15 +9,15 @@ class Ver extends CI_Controller {
 
      $data['header'] = array('title' => 'Proveedores' , 'proveedores' => '' , 'presupuestos' => '' , 'profecionistas' => 'active' );//se inicializa el titulo de la pagina
         /* Habre el html y el body, y carga el header junto con el css de bootstrap */
-        $this->load->view('header', $data);
+        $this->load->view('template/header', $data);
         /* Se cierra el body y el html, y se agregan los js de bootstrap */
-        $this->load->view('footer');
+        $this->load->view('template/footer');
     }
 
     public function vermas() {
       $data['header'] = array('title' => 'Proveedores' , 'proveedores' => '' , 'presupuestos' => '' , 'profecionistas' => 'active' );//se inicializa el titulo de la pagina
         /* Habre el html y el body, y carga el header junto con el css de bootstrap */
-        $this->load->view('header', $data);
+        $this->load->view('template/header', $data);
         $id = $this->input->post('id');
         //se carga en memoria
         $this->load->model('mvermas');
@@ -28,7 +28,7 @@ class Ver extends CI_Controller {
         /* carga el contenido de la pagina */
         $this->load->view('vermas', $variable);
         /* Se cierra el body y el html, y se agregan los js de bootstrap */
-        $this->load->view('footer');
+        $this->load->view('template/footer');
     }
 
     public function buscarPorProfesion() {
@@ -39,14 +39,14 @@ class Ver extends CI_Controller {
         /* carga el contenido de la pagina Y ENVIARLA A LA VISTA */
         if( $variable['registros'] ==false)
         {
-            redirect(base_url()."index.php/Listado");
+            redirect(base_url()."index.php/listado");
         }else
         {
-        $this->load->view('header', $data);
+        $this->load->view('template/header', $data);
         $this->load->view('profesionalistas', $variable);
         //$this->load->view('profesionalistas');
         /* Se cierra el body y el html, y se agregan los js de bootstrap */
-        $this->load->view('footer');
+        $this->load->view('template/footer');
     }
     }
 
@@ -58,14 +58,14 @@ class Ver extends CI_Controller {
         /* carga el contenido de la pagina Y ENVIARLA A LA VISTA */
         if( $variable['registros'] ==false)
         {
-            redirect(base_url()."index.php/Listado");
+            redirect(base_url()."index.php/listado");
         }else
         {
-        $this->load->view('header', $data);
+        $this->load->view('template/header', $data);
         $this->load->view('profesionalistas', $variable);
         //$this->load->view('profesionalistas');
         /* Se cierra el body y el html, y se agregan los js de bootstrap */
-        $this->load->view('footer');
+        $this->load->view('template/footer');
     }}
 
     public function buscarPorCarrera() {
@@ -76,25 +76,25 @@ class Ver extends CI_Controller {
        
         if( $variable['registros'] ==false)
         {
-            redirect(base_url()."index.php/Listado");
+            redirect(base_url()."index.php/listado");
         }else
         {
-        $this->load->view('header', $data);
+        $this->load->view('template/header', $data);
         $this->load->view('profesionalistas', $variable);
         //$this->load->view('profesionalistas');
        
-        $this->load->view('footer');
+        $this->load->view('template/footer');
     }}
     
     public function welcome() {
        $data['header'] = array('title' => 'Proveedores' , 'proveedores' => '' , 'presupuestos' => '' , 'profecionistas' => 'active' );//se inicializa el titulo de la pagina
-        $this->load->view('header',$data);
+        $this->load->view('template/header',$data);
 
       
         $this->load->view('menu');
 
       
-        $this->load->view('footer');
+        $this->load->view('template/footer');
     }
 
 }

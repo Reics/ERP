@@ -14,13 +14,13 @@ class Welcome extends CI_Controller {
 		
 		$data['header'] = array('title' => 'Proveedores' , 'proveedores' => '' , 'presupuestos' => '' , 'profecionistas' => 'active' );//se inicializa el titulo de la pagina
 		/*Habre el html y el body, y carga el header junto con el css de bootstrap*/
-		$this->load->view('header',$data);
+		$this->load->view('template/header',$data);
 
 		$dato['profes']=$this->menu_model->get_anadidos();    
 		$this->load->view('menu',$dato);
 
 		/*Se cierra el body y el html, y se agregan los js de bootstrap*/
-		$this->load->view('footer');
+		$this->load->view('template/footer');
 
 	}
 	public function mostrar()
@@ -30,16 +30,16 @@ class Welcome extends CI_Controller {
 		
 		if($data['registros']==false)
 		{
-			$url= base_url();
+			$url= base_url()."index.php/welcome";
 			redirect($url);
 
 		}else{
 			
 			$data['header'] = array('title' => 'Proveedores' , 'proveedores' => '' , 'presupuestos' => '' , 'profecionistas' => 'active' );//se inicializa el titulo de la pagina
 		
-		$this->load->view('header',$data);
+		$this->load->view('template/header',$data);
 		$this->load->view('profesionalistas',$data);
-		$this->load->view('footer');
+		$this->load->view('template/footer');
 		}
 	}
 
