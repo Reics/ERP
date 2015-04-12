@@ -1,6 +1,6 @@
 <section>
     
-    <legend style="margin-top:20px;">Agregar Producto</legend>
+    <legend style="margin-top:20px;">EditarProducto</legend>
 
     <form class="form-group" id="formEditarProducto" style="margin-left:100px;" action="<?= site_url() ?>/preciosUnitarios/productos/update" method="POST">
         <input hidden name="idPreciosUnitarios" value="<?= $idPreciosUnitarios ?>">
