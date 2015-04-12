@@ -30,7 +30,7 @@ class Welcome extends CI_Controller {
 		
 		if($data['registros']==false)
 		{
-			$url= base_url();
+			$url= base_url()."index.php/welcome";
 			redirect($url);
 
 		}else{

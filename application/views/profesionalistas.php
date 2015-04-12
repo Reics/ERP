@@ -93,10 +93,10 @@
 </div>
 <br /><br /><br /><br />
 <div align="center">
-<a href="Nuevo">
+<a href="<?php echo base_url(); ?>index.php/nuevo">
 <button name="agregar" class="btn btn-primary" style=" alignment-adjust:middle; margin:5px; width:150px" >Agregar nuevo</button>
 </a>
-<a href="<?php echo base_url(); ?>index.php/Welcome">
+<a href="<?php echo base_url(); ?>index.php/welcome">
 <button name="cerrar" class="btn btn-danger" style=" alignment-adjust:middle; width:150px;">Cerrar</button>
 </a>
 </div>
