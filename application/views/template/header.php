@@ -10,6 +10,12 @@
     <!-- Bootstrap -->
     <link href="<?php echo base_url("assets/css/bootstrap.min.css");?>" rel="stylesheet">
 
+     
+    <!--jQuery-->
+
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/jquery-ui-1.11.4/jquery-ui.css");?>"/>
+    <script src="<?php echo base_url("assets/jquery-ui-1.11.4/jquery-ui.js");?>"></script>   
+    
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
