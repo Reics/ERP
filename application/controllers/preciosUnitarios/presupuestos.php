@@ -9,6 +9,7 @@ class Presupuestos extends CI_Controller {
         parent::__construct();
         $this->load->helper('url');
         $this->load->model('preciosUnitarios/presupuestos_model');
+        $this->load->model('preciosUnitarios/productos_model');
     }
 
     public function index() {
@@ -78,6 +79,26 @@ class Presupuestos extends CI_Controller {
 
         /* carga el contenido de la pagina */
         $this->load->view('preciosUnitarios/presupuestos/editarPresupuesto');
+
+        /* Se cierra el body y el html, y se agregan los js de bootstrap */
+        $this->load->view('template/footer');
+    }
+
+    public function productoPresupuesto($id) {
+
+        $tabla = array(
+            'producto' => $this->productos_model->get_all()
+        );
+
+
+
+        $data['header'] = array('title' => 'Producto Presupuesto', 'proveedores' => '', 'presupuestos' => 'active', 'profecionistas' => ''); //se inicializa el titulo de la pagina
+
+        /* Habre el html y el body, y carga el header junto con el css de bootstrap */
+        $this->load->view('template/header', $data);
+
+        /* carga el contenido de la pagina */
+        $this->load->view('preciosUnitarios/presupuestos/productosPresupuesto',$tabla);
 
         /* Se cierra el body y el html, y se agregan los js de bootstrap */
         $this->load->view('template/footer');
