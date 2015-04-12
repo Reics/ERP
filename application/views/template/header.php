@@ -21,7 +21,7 @@
             background-color: #CCC;
         }
     </style>
-    !-- choose a theme file -->
+   <!-- choose a theme file -->
 <link rel="stylesheet" href="/path/to/theme.default.css">
 <!-- load jQuery and tablesorter scripts -->
 <script type="text/javascript" src="/path/to/jquery-latest.js"></script>
