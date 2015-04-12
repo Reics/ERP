@@ -9,7 +9,8 @@ class Productos_model extends CI_Model {
         $this->db->insert('preciosunitarios', $data);
     }
     public function update($data) {
-        $this->db->where('idPreciosUnitarios',$data["idPreciosUnitarios"]);
+        $this->db->where('idPreciosUnitarios', $data["idPreciosUnitarios"]);
+
         $this->db->update('preciosunitarios', $data); 
     }
     public function delete($id) {

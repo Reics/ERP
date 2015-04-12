@@ -1,5 +1,4 @@
-<section>
-    
+<section>  
     <legend style="margin-top:20px;">EditarProducto</legend>
 
     <form class="form-group" id="formEditarProducto" style="margin-left:100px;" action="<?= site_url() ?>/preciosUnitarios/productos/update" method="POST">
@@ -38,10 +37,12 @@
             </div>
             <div class="col-md-4" style="margin-left:600px;">
                 <div class="row">
+
                     <button type="submit" id="Guardar" class="btn btn-success" style="width: 86px;" >Guardar</button></form>
                     <a type="button" id="Cancelar" class="btn btn-danger" style="margin-left:10px; width: 86px;" href="<?php echo site_url("preciosUnitarios/productos"); ?>">Cancelar</a>
+
                 </div>
             </div>
         </div>
-    </form>
+
 </section>

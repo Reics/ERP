@@ -21,7 +21,9 @@
                         <td><?php echo $p['contratista']; ?></td>
                         <td><?php echo $p['fecha_inicio']; ?></td>
                         <td>
-                            <a type="button" class="btn btn-default" aria-label="Left Align" href="<?= site_url() ?>/preciosUnitarios/presupuestos/productoPresupuesto/<?= $p['idPresupuesto'] ?>">
+
+                            <a type="button" class="btn btn-default" aria-label="Left Align"  href="<?= site_url() ?>/preciosUnitarios/presupuestos/indexproduct/<?= $p['idPresupuesto'] ?>">
+
                                 <span class='glyphicon glyphicon-list' aria-hidden='true'></span>
                             </a>
                             <a type="button" class="btn btn-default" aria-label="Left Align" href="<?= site_url() ?>/preciosUnitarios/presupuestos/update_form/<?= $p['idPresupuesto'] ?>">

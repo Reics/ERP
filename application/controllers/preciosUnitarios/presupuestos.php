@@ -53,81 +53,63 @@ class Presupuestos extends CI_Controller {
         redirect('preciosUnitarios/presupuestos');
     }
 
-    public function update_form() {
-        $get_data = $this->productos_model->get_by_id($id);
+    public function update_form($id) {
+        $get_data = $this->presupuestos_model->get_by_id($id);
         if ($get_data != NULL) {
-                $nombre = $get_data["nombre"];
-                $unidadMedida = $get_data["unidadMedida"];
-                $precioUnitario = $get_data["precioUnitario"];
-                $idCategoria = $get_data["idCategoria"];
-            
+                $contratista= $get_data["contratista"];
+                $obra = $get_data["obra"];
+                $ubicacion = $get_data["ubicacion"];
+                $analisis = $get_data["analisis"];
+                $fecha_inicio = $get_data["fecha_inicio"];
+                $fecha_fin = $get_data["fecha_fin"];
+                $unidad = $get_data["unidad"];
+                $rendimiento = $get_data["rendimiento"];
+                $partida = $get_data["partida"];
             $data = array (
-                'idPreciosUnitarios' => $id,
-                'nombre' => $nombre,
-                'unidadMedida' => $unidadMedida,
-                'precioUnitario' => $precioUnitario,
-                'idCategoria' => $idCategoria
+                'idPresupuesto' => $id,
+                'contratista' => $contratista,
+                'obra' => $obra,
+                'ubicacion' => $ubicacion,
+                'analisis' => $analisis,
+                'fecha_inicio' => $fecha_inicio,
+                'fecha_fin' => $fecha_fin,
+                'unidad' => $unidad,
+                'rendimiento' => $rendimiento,
+                'partida' => $partida
             );
 
         } else {
             $data = '';
         }
-        $data['header'] = array('title' => 'Editar Presupuesto', 'proveedores' => '', 'presupuestos' => 'active', 'profecionistas' => ''); //se inicializa el titulo de la pagina
+        $head['header'] = array('title' => 'Editar Presupuesto', 'proveedores' => '', 'presupuestos' => 'active', 'profecionistas' => ''); //se inicializa el titulo de la pagina
 
         /* Habre el html y el body, y carga el header junto con el css de bootstrap */
-        $this->load->view('template/header', $data);
+        $this->load->view('template/header', $head);
 
         /* carga el contenido de la pagina */
-        $this->load->view('preciosUnitarios/presupuestos/editarPresupuesto');
+        $this->load->view('preciosUnitarios/presupuestos/editarPresupuesto', $data);
 
         /* Se cierra el body y el html, y se agregan los js de bootstrap */
         $this->load->view('template/footer');
     }
 
-    public function productoPresupuesto($id) {
+    public function update() {
+        $data = $this->input->post();
+        $this->presupuestos_model->update($data);
+        redirect('preciosUnitarios/presupuestos');
+    }
+    public function indexproduct($id) {
+        
+        $head['header'] = array('title' => 'Presupuestos', 'proveedores' => '', 'presupuestos' => 'active', 'profecionistas' => ''); //se inicializa el titulo de la pagina
 
         $tabla = array(
-            'producto' => $this->productos_model->get_all()
+            'presupuesto' => $this->presupuestos_model->get_product($id)
         );
+        
+        $this->load->view('template/header', $head);
 
+        $this->load->view('preciosUnitarios/presupuestos/presupuestoProductos', $tabla);
 
-
-        $data['header'] = array('title' => 'Producto Presupuesto', 'proveedores' => '', 'presupuestos' => 'active', 'profecionistas' => ''); //se inicializa el titulo de la pagina
-
-        /* Habre el html y el body, y carga el header junto con el css de bootstrap */
-        $this->load->view('template/header', $data);
-
-        /* carga el contenido de la pagina */
-        $this->load->view('preciosUnitarios/presupuestos/productosPresupuesto',$tabla);
-
-        /* Se cierra el body y el html, y se agregan los js de bootstrap */
         $this->load->view('template/footer');
     }
-
-    public function agregarProducto() {
-        $data['header'] = array('title' => 'Agregar Producto Presupuesto', 'proveedores' => '', 'presupuestos' => 'active', 'profecionistas' => ''); //se inicializa el titulo de la pagina
-
-        /* Habre el html y el body, y carga el header junto con el css de bootstrap */
-        $this->load->view('template/header', $data);
-
-        /* carga el contenido de la pagina */
-        $this->load->view('preciosUnitarios/presupuestos/agregarProductoPresupuesto');
-
-        /* Se cierra el body y el html, y se agregan los js de bootstrap */
-        $this->load->view('template/footer');
-    }
-
-    public function editarProducto() {
-        $data['header'] = array('title' => 'Editar Producto Presupuesto', 'proveedores' => '', 'presupuestos' => 'active', 'profecionistas' => ''); //se inicializa el titulo de la pagina
-
-        /* Habre el html y el body, y carga el header junto con el css de bootstrap */
-        $this->load->view('template/header', $data);
-
-        /* carga el contenido de la pagina */
-        $this->load->view('preciosUnitarios/presupuestos/editarProductoPresupuesto');
-
-        /* Se cierra el body y el html, y se agregan los js de bootstrap */
-        $this->load->view('template/footer');
-    }
-
 }
