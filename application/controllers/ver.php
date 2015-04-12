@@ -39,7 +39,7 @@ class Ver extends CI_Controller {
         /* carga el contenido de la pagina Y ENVIARLA A LA VISTA */
         if( $variable['registros'] ==false)
         {
-            redirect(base_url()."index.php/Listado");
+            redirect(base_url()."index.php/listado");
         }else
         {
         $this->load->view('header', $data);
@@ -58,7 +58,7 @@ class Ver extends CI_Controller {
         /* carga el contenido de la pagina Y ENVIARLA A LA VISTA */
         if( $variable['registros'] ==false)
         {
-            redirect(base_url()."index.php/Listado");
+            redirect(base_url()."index.php/listado");
         }else
         {
         $this->load->view('header', $data);
@@ -76,7 +76,7 @@ class Ver extends CI_Controller {
        
         if( $variable['registros'] ==false)
         {
-            redirect(base_url()."index.php/Listado");
+            redirect(base_url()."index.php/listado");
         }else
         {
         $this->load->view('header', $data);
