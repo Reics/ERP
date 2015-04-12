@@ -16,9 +16,9 @@
       <div class="slide-1"></div>
       <div class="hero">
         <hgroup>
-            <img src="<?php echo base_url("assets/img/slide1.jpg");?>"/>
+            <img src="<?php echo base_url("assets/img/slide1.jpg");?>" class="img-responsive" alt="Responsive image"/>
             <h1>SIDA ISEI</h1>        
-            <h3>Es un despacho de arquitectos capaz de llevar a cabo sus proyectos</h3>
+            <h3>Capaz de llevar a cabo sus proyectos</h3>
         </hgroup>
       </div>
     </div>
@@ -26,9 +26,9 @@
       <div class="slide-2"></div>
       <div class="hero">        
         <hgroup>
-            <img src="<?php echo base_url("assets/img/slide2.jpg");?>"/>
+            <img src="<?php echo base_url("assets/img/slide2.jpg");?>" class="img-responsive" alt="Responsive image"/>
             <h1>SIDA ISEI</h1>        
-            <h3>Le ofrece hacer realidad la casa de sus sueños</h3>
+            <h3>Hace realidad la casa de sus sueños</h3>
         </hgroup>       
       </div>
     </div>
@@ -36,7 +36,7 @@
       <div class="slide-3"></div>
       <div class="hero">        
         <hgroup>
-            <img src="<?php echo base_url("assets/img/slide3.jpg");?>"/>
+            <img src="<?php echo base_url("assets/img/slide3.jpg");?>" class="img-responsive" alt="Responsive image"/>
             <h1>SIDA ISEI</h1>        
             <h3>Le da la bienvenida</h3>
         </hgroup>
