@@ -19,8 +19,8 @@
   
   <div class="btn-group-vertical">
   <br></br>
- <a href="<?php echo base_url() ?>index.php/Listado">  <button id="button1id" name="button1id" class="btn btn-success" style="margin:10px;" onClick="">Ir a listado de Profesionistas</button></a>
-   <a href="<?php echo base_url() ?>index.php/Nuevo">  <button type="button" class="btn btn-primary" style="margin:10px;">Ir a Añadir Nuevo Profesionista</button> </a> </div>
+ <a href="<?php echo base_url() ?>index.php/listado">  <button id="button1id" name="button1id" class="btn btn-success" style="margin:10px;" onClick="">Ir a listado de Profesionistas</button></a>
+   <a href="<?php echo base_url() ?>index.php/nuevo">  <button type="button" class="btn btn-primary" style="margin:10px;">Ir a Añadir Nuevo Profesionista</button> </a> </div>
   
   <div align="center" style=" float:right; width:55%; "> 
     <strong>Añadidos Recientemente</strong>

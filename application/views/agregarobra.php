@@ -10,7 +10,7 @@
 <h3	align="center">Nueva Obra</h3>
 <hr />
 <fieldset>
-<form class="form-horizontal" method="post" action="<?php  echo base_url() ?>index.php/Agregarobra/insertarobra">
+<form class="form-horizontal" method="post" action="<?php  echo base_url() ?>index.php/agregarobra/insertarobra">
  <?php foreach ($registros as $fila) {                  ?>
   <?php   $id=$fila->ID_Profesionistas; ?>
   <?php }?>
