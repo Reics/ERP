@@ -7,6 +7,7 @@ class Listado extends CI_Controller {
         { 
             parent::__construct();
             $this->load->helper('url'); 
+             $this->output->enable_profiler(TRUE);
         }
 
 

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-<<<<<<< HEAD
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js">
@@ -22,7 +21,7 @@
             background-color: #CCC;
         }
     </style>
-    !-- choose a theme file -->
+    <!-- choose a theme file -->
 <link rel="stylesheet" href="/path/to/theme.default.css">
 <!-- load jQuery and tablesorter scripts -->
 <script type="text/javascript" src="/path/to/jquery-latest.js"></script>
@@ -44,8 +43,6 @@
             }
             google.maps.event.addDomListener(window, 'load', initialize);
     </script>
-=======
->>>>>>> 43b8c579c647696fe3592a5914bf272ca6349fe3
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
