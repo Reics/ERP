@@ -1,78 +1,47 @@
+<section>
+<div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel" align="center">
+  <!-- Overlay -->
+  <div class="overlay"></div>
 
-    <section>
-        <div class="container">
-
-<h2 align="center">Listado de Proovedores</h2><hr>
-
-    <div class="row">
-        <div class="col-md-3">
-            <label>Categoría</label>
-            <select class="form-control" name="cuatrimestre" id="cuatrimestre">
-                <option value="primero">Cemento y Arena</option>
-                <option value="segundo">Varillas y Herramientas</option>
-            </select>
-        </div>
-
-        <div class="col-md-3">
-            <label>Provincia</label>
-            <select class="form-control" name="especialidad" id="especialidad">
-                <option value="redes">México</option>
-                <option value="software">Estados Unidos</option>
-            </select>
-        </div>
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
+    <li data-target="#bs-carousel" data-slide-to="1"></li>
+    <li data-target="#bs-carousel" data-slide-to="2"></li>
+  </ol>
+  
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item slides active">
+      <div class="slide-1"></div>
+      <div class="hero">
+        <hgroup>
+            <img src="<?php echo base_url("assets/img/slide1.jpg");?>" style="width: 420px; height: 320px;"/>
+            <h1>SIDA ISEI</h1>        
+            <h3>Capaz de llevar a cabo sus proyectos</h3>
+        </hgroup>
+      </div>
     </div>
-
-        <h2 align="center"></h2><hr>
-
-
-    <table class="table table-striped display" id="dataTable"> <!-- Tabla de competencias -->
-
-    <thead>
-        <tr>
-            <th>Proovedor</th>
-            <th>Provincia</th>
-            <th>Códio de Proovedor</th>
-            <th>Categoría</th>
-            <th>Ultima modificación</th>
-        </tr>   
-    </thead>
-    <tbody>
-        <tr>
-            <td>Proovedor 1</td>
-            <td>Estados Unidos</td>
-            <td>1</td>
-            <td>Cemento y Arena</td>
-            <td>05/03/2015</td>
-            <td>
-                <a type='button' class='btn btn-default' aria-label='Left Align'>
-                    <span class='glyphicon glyphicon-edit' aria-hidden='true'></span>
-                </a>
-                <a type='button' class='btn btn-default' aria-label='Left Align'>
-                    <span class='glyphicon glyphicon-remove' aria-hidden='true'></span>
-                </a>
-            </td>
-        </tr>
-    </tbody>
-    <tbody>
-        <tr>
-            <td>Proovedor 2</td>
-            <td>México</td>
-            <td>2</td>
-            <td>Varillas y Herramientas</td>
-            <td>05/03/2015</td>
-            <td>
-                <a type='button' class='btn btn-default' aria-label='Left Align'>
-                    <span class='glyphicon glyphicon-edit' aria-hidden='true'></span>
-                </a>
-                <a type='button' class='btn btn-default' aria-label='Left Align'>
-                    <span class='glyphicon glyphicon-remove' aria-hidden='true'></span>
-                </a>
-            </td>
-        </tr>
-    </tbody>
-</table>
-
-    
-
+    <div class="item slides">
+      <div class="slide-2"></div>
+      <div class="hero">        
+        <hgroup>
+            <img src="<?php echo base_url("assets/img/slide2.jpg");?>" style="width: 420px; height: 320px;"/>
+            <h1>SIDA ISEI</h1>        
+            <h3>Hace realidad la casa de sus sueños</h3>
+        </hgroup>       
+      </div>
     </div>
+    <div class="item slides">
+      <div class="slide-3"></div>
+      <div class="hero">        
+        <hgroup>
+            <img src="<?php echo base_url("assets/img/slide3.jpg");?>" style="width: 420px; height: 320px;"/>
+            <h1>SIDA ISEI</h1>        
+            <h3>Le da la bienvenida</h3>
+        </hgroup>
+      </div>
+    </div>
+  </div> 
+</div>
 </section>

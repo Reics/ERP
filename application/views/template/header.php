@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+<<<<<<< HEAD
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js">
@@ -43,6 +44,8 @@
             }
             google.maps.event.addDomListener(window, 'load', initialize);
     </script>
+=======
+>>>>>>> 43b8c579c647696fe3592a5914bf272ca6349fe3
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -52,10 +55,11 @@
     <!-- Bootstrap -->
     <link href="<?php echo base_url("assets/css/bootstrap.min.css");?>" rel="stylesheet">
 
+     
     <!--jQuery-->
 
     <link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/jquery-ui-1.11.4/jquery-ui.css");?>"/>
-    <script src="<?php echo base_url("assets/jquery-ui-1.11.4/jquery-ui.js");?>"></script>
+    <script src="<?php echo base_url("assets/jquery-ui-1.11.4/jquery-ui.js");?>"></script>   
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -74,7 +78,7 @@
 <table height="7%"  style=" height:5%; width:100%; border: solid #013;">
   <td style="width: 100%; font-size: 18px; color: #013;" align="center">
     <ul class="nav nav-pills nav-justified">
-      <li role="presentation" class="<?php echo $header['profecionistas'];?>"><a href="<?php echo site_url("menu/profesionistas");?>">Profesionistas</a></li>
+      <li role="presentation" class="<?php echo $header['profecionistas'];?>"><a href="<?php echo site_url("welcome");?>">Profesionistas</a></li>
       <li role="presentation" class="<?php echo $header['proveedores'];?>"><a href="<?php echo site_url("menu/proveedores");?>">Proveedores</a></li>
       <li role="presentation" class="<?php echo $header['presupuestos'];?>"><a href="<?php echo site_url("menu/preciosUnitarios");?>">Presupuestos</a></li>
     </ul>
