@@ -2,26 +2,48 @@
 
 class Welcome extends CI_Controller {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -  
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in 
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see http://codeigniter.com/user_guide/general/urls.html
-	 */
+	public function __construct() 
+        { 
+            parent::__construct();
+            $this->load->helper('url'); 
+            $this->load->model('menu_model');
+        }
+		
 	public function index()
-	{
-		$this->load->view('welcome_message');
-	}
-}
+	{	
+		
+		$data['header'] = array('title' => 'Proveedores' , 'proveedores' => '' , 'presupuestos' => '' , 'profecionistas' => 'active' );//se inicializa el titulo de la pagina
+		/*Habre el html y el body, y carga el header junto con el css de bootstrap*/
+		$this->load->view('template/header',$data);
 
-/* End of file welcome.php */
-/* Location: ./application/controllers/welcome.php */
+		$dato['profes']=$this->menu_model->get_anadidos();    
+		$this->load->view('menu',$dato);
+
+		/*Se cierra el body y el html, y se agregan los js de bootstrap*/
+		$this->load->view('template/footer');
+
+	}
+	public function mostrar()
+	{
+			$nombre=$this->input->post('nombre');
+			$data['registros']=$this->menu_model->get_consulta($nombre); 
+		
+		if($data['registros']==false)
+		{
+			$url= base_url()."index.php/welcome";
+			redirect($url);
+
+		}else{
+			
+			$data['header'] = array('title' => 'Proveedores' , 'proveedores' => '' , 'presupuestos' => '' , 'profecionistas' => 'active' );//se inicializa el titulo de la pagina
+		
+		$this->load->view('template/header',$data);
+		$this->load->view('profesionalistas',$data);
+		$this->load->view('template/footer');
+		}
+	}
+
+
+	}
+	
+
