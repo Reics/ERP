@@ -83,7 +83,6 @@ class Productos extends CI_Controller {
     public function update() {
         $data = $this->input->post();
         $this->productos_model->update($data);
-        $this->output->enable_profiler(TRUE);
         redirect('preciosUnitarios/productos');
     }
 
