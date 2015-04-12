@@ -10,6 +10,7 @@ class Presupuestos extends CI_Controller {
         $this->load->helper('url');
         $this->load->model('preciosUnitarios/presupuestos_model');
         $this->load->model('preciosUnitarios/productos_model');
+        $this->output->enable_profiler(TRUE);
     }
 
     public function index() {
@@ -98,6 +99,7 @@ class Presupuestos extends CI_Controller {
         $this->presupuestos_model->update($data);
         redirect('preciosUnitarios/presupuestos');
     }
+
     public function indexproduct($id) {
         
         $head['header'] = array('title' => 'Presupuestos', 'proveedores' => '', 'presupuestos' => 'active', 'profecionistas' => ''); //se inicializa el titulo de la pagina
