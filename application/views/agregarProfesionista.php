@@ -5,7 +5,7 @@
 <br>
 
 <hr>
-<form class="form-horizontal" method="post" action="<?php  echo base_url() ?>index.php/Agregar">
+<form class="form-horizontal" method="post" action="<?php  echo base_url() ?>index.php/agregar">
                 <fieldset>
 
                     <!-- Form Name -->

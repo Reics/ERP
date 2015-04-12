@@ -7,7 +7,7 @@
 <h3	align="center">Nueva Carrera</h3>
 <hr />
 <fieldset>
-<form class="form-horizontal" method="post" action="<?php  echo base_url() ?>index.php/Agregarcarrera/insertar">
+<form class="form-horizontal" method="post" action="<?php  echo base_url() ?>index.php/agregarcarrera/insertar">
  <?php foreach ($registros as $fila) {                  ?>
   <?php  $id=$fila->ID_Profesionistas; ?>
   <?php }?>
