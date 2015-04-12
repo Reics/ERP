@@ -7,6 +7,11 @@
 -- Versión del servidor: 5.6.16
 -- Versión de PHP: 5.5.11
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 9df1aa80d7c48d0d34c0c81cadf172076576835d
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
@@ -25,7 +30,12 @@ SET time_zone = "+00:00";
 --
 -- Estructura de tabla para la tabla `contactos`
 --
+<<<<<<< HEAD
 
+=======
+CREATE DATABASE  IF NOT EXISTS `proovedores` /*!40100 DEFAULT CHARACTER SET utf8 */;
+use `proovedores`;
+>>>>>>> 9df1aa80d7c48d0d34c0c81cadf172076576835d
 CREATE TABLE IF NOT EXISTS `contactos` (
   `idContacto` int(11) NOT NULL AUTO_INCREMENT,
   `Nombre` varchar(100) NOT NULL,

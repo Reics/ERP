@@ -6,7 +6,7 @@
 
   
   <div align="center">
-    <table width="879" height="188" border="0" style="margin-top:50px; margin-left:220px;">
+    <table width="879" height="188" border="0" style="margin-top:50px; margin-left:0px;">
       <tr>
         <td align="left" width="200" height="150"><p align="left"><a href="<?php echo site_url("proveedores/relacionar");?>"><img src="<?php echo base_url("assets/img/proveedores/5.jpg");?>" width="200" height="150"  alt=""/></a></p></td>
         <td align="left" width="200" height="150"><p align="left"><a href="<?php echo site_url("proveedores/listado/borrarcontacto");?>"><img src="<?php echo base_url("assets/img/proveedores/4.jpg");?>" width="200" height="150"  alt=""/></a></p></td>
