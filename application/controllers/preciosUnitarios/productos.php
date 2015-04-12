@@ -68,7 +68,6 @@ class Productos extends CI_Controller {
         } else {
             $data = '';
         }
-        
         $head['header'] = array('title' => 'Editar Productos', 'proveedores' => '', 'presupuestos' => 'active', 'profecionistas' => ''); //se inicializa el titulo de la pagina
 
         //Habre el html y el body, y carga el header junto con el css de bootstrap */
@@ -84,6 +83,7 @@ class Productos extends CI_Controller {
     public function update() {
         $data = $this->input->post();
         $this->productos_model->update($data);
+        $this->output->enable_profiler(TRUE);
         redirect('preciosUnitarios/productos');
     }
 
