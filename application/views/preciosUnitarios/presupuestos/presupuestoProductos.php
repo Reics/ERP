@@ -11,14 +11,13 @@ and open the template in the editor.
     </head>
     <body>
         
-        <h2>P001         ALUMARK S.A       Edificios Apartamentales</h2><hr>
+        <h2></h2><hr>
         
 
 <table class="table table-striped" id="dataTable">
     <thead>    
         <tr>
             <th>Materiales</th>
-            <th>Unidad</th>
             <th>Cantidad</th>
             <th>Precio Unitario</th>
             <th>Importe</th>
@@ -27,20 +26,19 @@ and open the template in the editor.
     </thead>
     <tbody>        
         
-        <?php if ($preciounitario != NULL) {
-            foreach ($preciounitario as $p): ?>
+        <?php if ($presupuesto != NULL) {
+            foreach ($presupuesto as $p): ?>
                 <tr>
-                    <td><?php echo $p['materiales']; ?></td>
-                    <td><?php echo $p['unidad']; ?></td>
+                    <td><?php echo $p['idPreciosUnitarios']; ?></td>
                     <td><?php echo $p['cantidad']; ?></td>
+                    <td><?php echo $p['precio_unitario']; ?></td>
+                    <td><?php echo $p['cantidad'] * $p['precio_unitario']; ?></td>
                     <td>
-                        <a type="button" class="btn btn-default" aria-label="Left Align" href="<?=site_url()?>/preguntas/set_form/<?=$p['idencuesta']?>">
-                            <span class='glyphicon glyphicon-plus' aria-hidden='true'></span>
-                        </a>
-                        <a type="button" class="btn btn-default" aria-label="Left Align" href="<?=site_url()?>/encuestas/update_form/<?=$p['idencuesta']?>">
+                        
+                        <a type="button" class="btn btn-default" aria-label="Left Align" >
                             <span class='glyphicon glyphicon-edit' aria-hidden='true'></span>
                         </a>
-                        <a type="button" class="btn btn-default" aria-label="Left Align" href="<?=site_url()?>/encuestas/delete/<?=$p['idencuesta']?>">
+                        <a type="button" class="btn btn-default" aria-label="Left Align" >
                             <span class='glyphicon glyphicon-remove' aria-hidden='true'></span>
                         </a>
                     </td>
@@ -55,7 +53,7 @@ and open the template in the editor.
 <div align="right">
     <h3>Total</h3>
     <button type="button" class="btn btn-danger">Regresar</button>
-    <a type="button" class="btn btn-primary" href="<?= site_url() ?>/encuestas/set_form">Agregar Producto</a>
+    <a type="button" class="btn btn-primary" >Agregar Producto</a>
 </div>
     </body>
 </html>
