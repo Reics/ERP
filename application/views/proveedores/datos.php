@@ -9,8 +9,6 @@
 <a role="button" class="btn btn-primary btn-lg" href="<?=site_url()?>/proveedores/listado/datos/<?=$e['idProovedor']?>">Ficha</a>
 <a role="button" class="btn btn-primary btn-lg" href="<?=site_url()?>/proveedores/listado/mapa/<?=$e['idProovedor']?>">Mapa</a>
 <a role="button" class="btn btn-primary btn-lg" href="<?=site_url()?>/proveedores/listado/contactos/<?=$e['idProovedor']?>">Contacto</a>
-</div> 
-
 <legend align="center">Fichas</legend>
 <div align="center">
                 <table style="margin-left: 50px; margin left:30px">
@@ -58,7 +56,7 @@
                 <form class="form-inline">
                     <div class="form-group">
                         <td><label for="Provincia">Provincia: </label></td>
-                        <td><input type="text" readonly="readonly" class="form-control" id="Provincia" value="<?php echo $e['Provincia']; ?>"></td>
+                        <td><input type="text" readonly="readonly" class="form-control" id="Provincia" value="<?php echo $e['Pais']; ?>"></td>
                     </div>
                 </form>
                 </tr>
@@ -66,54 +64,51 @@
                 <form class="form-inline">
                     <div class="form-group">
                         <td><label for="numero1">Telefono Trabajo: </label></td>
-                        <td><input type="text" readonly="readonly" class="form-control" id="numero1" value="<?php echo $e['No1']; ?>"></td>
+                        <td><input type="text" readonly="readonly" class="form-control" id="numero1" value="<?php echo $e['Numero1']; ?>"></td>
                     </div>
                     <div class="form-group">
                         <td><label for="numero2">Telefono Particular: </label></td>
-                        <td><input type="text" readonly="readonly" class="form-control" id="numero2" value="<?php echo $e['No2']; ?>"></td>
+                        <td><input type="text" readonly="readonly" class="form-control" id="numero2" value="<?php echo $e['Numero2']; ?>"></td>
                     </div>
                 </form>
                 </tr>
                 <tr>
-                <form class="form-inline">
                     <div class="form-group">
                         <td><label for="numero3">Movil: </label></td>
-                        <td><input type="text" readonly="readonly" class="form-control" id="numero3" value="<?php echo $e['No3']; ?>"></td>
+                        <td><input type="text" readonly="readonly" class="form-control" id="numero3" value="<?php echo $e['Numero3']; ?>"></td>
                     </div>
                 </form>
                 </tr>
                 <tr>
                 <form class="form-inline">
                     <div class="form-group">
-                        <td><label for="correo1">Email 1: </label></td>
-                        <td><input type="text" readonly="readonly" class="form-control" id="correo1" value="<?php echo $e['Co1']; ?>"></td>
+                        <td><label for="Twiter1">Correo 1:</label></td>
+                        <td><input type="text" readonly="readonly" class="form-control" id="Web" value="<?php echo $e['Correo1']; ?>"></td>
                     </div>
                     <div class="form-group">
-                        <td><label for="correo2">Email 2: </label></td>
-                        <td><input type="text" readonly="readonly" class="form-control" id="correo2" value="<?php echo $e['Co2']; ?>"></td>
+                        <td><label for="Facebook1">Correo 2:</label></td>
+                        <td><input type="text" readonly="readonly" class="form-control" id="Web" value="<?php echo $e['Correo2']; ?>"></td>
                     </div>
                 </form>
                 </tr>
                 <tr>
-                <form class="form-inline">
                     <div class="form-group">
-                        <td><label for="Twiter1">Red Social 1: </label></td>
-                        <td><input type="text" readonly="readonly" class="form-control" id="Web" value="<?php echo $e['Fa1']; ?>"></td>
-                    </div>
-                    <div class="form-group">
-                        <td><label for="Facebook1">Red Social 2: </label></td>
-                        <td><input type="text" readonly="readonly" class="form-control" id="Web" value="<?php echo $e['Fa2']; ?>"></td>
+                        <td><label for="numero3">Facebook: </label></td>
+                        <td><input type="text" readonly="readonly" class="form-control" id="numero3" value="<?php echo $e['Correo3']; ?>"></td>
                     </div>
                 </form>
                 </tr>
            
 </table>
 </div><br>
-                <div class="col-sm-offset-8 col-sm-10">
-                                        <a role="button" class="btn btn-success" href="<?php echo site_url("proveedores/contacto");?>">Editar</a>
-                </div>
             </div>
 
 </div>
  <?php endforeach?>
+
+ <br>
+                    <br>
+                    <div style="float:center;" class="col-sm-offset-8 col-sm-10">
+                                        <a role="button" class="btn btn-success" href="<?=site_url()?>/menu/proveedores">Ir a página principal de Proveedores</a>
+                </div>
 </section>

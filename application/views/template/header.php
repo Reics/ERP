@@ -28,29 +28,6 @@
 <script type="text/javascript" src="/path/to/jquery.tablesorter.js"></script>
 
 <!-- tablesorter widgets (optional) -->
-<script type="text/javascript" src="/path/to/jquery.tablesorter.widgets.js"></script>
-<script>
-$(document).ready(function() {
-    $("#styling").tableSorter({
-        sortColumn: 'Proovedor',           // número entero del índice o nombre de la columna en minúsculas
-        sortClassAsc: 'headerSortUp',       // clase css de la cabecera de la columna cuando aplicamos un orden ascendente
-        sortClassDesc: 'headerSortDown',    // clase css de la cabecera de la columna cuando aplicamos un orden descendente
-        headerClass: 'header'           // clase genérica de las cabeceras (th's)
-        sortColumn: 'Provincia',           // número entero del índice o nombre de la columna en minúsculas
-        sortClassAsc: 'headerSortUp',       // clase css de la cabecera de la columna cuando aplicamos un orden ascendente
-        sortClassDesc: 'headerSortDown',    // clase css de la cabecera de la columna cuando aplicamos un orden descendente
-        headerClass: 'header'  
-        sortColumn: 'códio de proovedor',           // número entero del índice o nombre de la columna en minúsculas
-        sortClassAsc: 'headerSortUp',       // clase css de la cabecera de la columna cuando aplicamos un orden ascendente
-        sortClassDesc: 'headerSortDown',    // clase css de la cabecera de la columna cuando aplicamos un orden descendente
-        headerClass: 'header'  
-        sortColumn: 'categoría',           // número entero del índice o nombre de la columna en minúsculas
-        sortClassAsc: 'headerSortUp',       // clase css de la cabecera de la columna cuando aplicamos un orden ascendente
-        sortClassDesc: 'headerSortDown',    // clase css de la cabecera de la columna cuando aplicamos un orden descendente
-        headerClass: 'header'  
-    });
-});
-</script>
 
     <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script>
