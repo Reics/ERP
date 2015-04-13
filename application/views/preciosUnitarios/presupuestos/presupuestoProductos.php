@@ -1,6 +1,6 @@
 
         
-        <legend style="margin-top:20px;">Agregar producto a presupuesto</legend>
+        <legend style="margin-top:20px;">Productos del presupuesto</legend>
 <table class="table table-striped" id="dataTable">
     <thead>    
         <tr>
