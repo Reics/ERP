@@ -114,17 +114,20 @@ class Presupuestos extends CI_Controller {
         $this->load->view('template/footer');
     }
 
-    public function agregarProducto() {
-        $data['header'] = array('title' => 'Agregar Producto Presupuesto', 'proveedores' => '', 'presupuestos' => 'active', 'profecionistas' => ''); //se inicializa el titulo de la pagina
+    public function agregarProducto($idPresupuesto) {
+        $head['header'] = array('title' => 'Agregar Producto Presupuesto', 'proveedores' => '', 'presupuestos' => 'active', 'profecionistas' => ''); //se inicializa el titulo de la pagina
 
-        $productos = array(
-            'producto' => $this->productos_model->get_all()
+        $data = array(
+            'producto' => $this->presupuestos_model->get_products()
         );
+        
+        $data["$idPresupuesto"];
+        
         /* Habre el html y el body, y carga el header junto con el css de bootstrap */
-        $this->load->view('template/header', $data);
+        $this->load->view('template/header', $head);
 
         /* carga el contenido de la pagina */
-        $this->load->view('preciosUnitarios/presupuestos/agregarProductoPresupuesto',$productos);
+        $this->load->view('preciosUnitarios/presupuestos/agregarProductoPresupuesto', $data);
 
         /* Se cierra el body y el html, y se agregan los js de bootstrap */
         $this->load->view('template/footer');
@@ -135,5 +138,17 @@ class Presupuestos extends CI_Controller {
         $this->presupuestos_model->setProducto($data);
         redirect('preciosUnitarios/presupuestos/presupuestoProductos');
     }
-
+    
+    public function update_productform($id) {
+        $get_data = $this->presupuestos_model->get_by_id($id);
+    }
+    public function updateproduct(){
+        $data = $this->input->post();
+        $this->presupuestos_model->updateproduct($data);
+        redirect('preciosUnitarios/presupuestos');
+    }
+    public function deleteproduct($id, $id2) {
+        $this->presupuestos_model->deleteProduct($id, $id2);
+        redirect('preciosUnitarios/presupuestos');
+    }
 }

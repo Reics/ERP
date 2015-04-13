@@ -23,23 +23,23 @@
                     <td><?php echo $p['cantidad'] * $p['precio_unitario']; ?></td>
                     <td>
                         
-                        <a type="button" class="btn btn-default" aria-label="Left Align" >
+                        <a type="button" class="btn btn-default" aria-label="Left Align" href="<?= site_url() ?>/preciosUnitarios/presupuestos/update_productform/<?= $p['idPresupuesto']?>/<?= $p['idPreciosUnitarios']?>">
                             <span class='glyphicon glyphicon-edit' aria-hidden='true'></span>
                         </a>
-                        <a type="button" class="btn btn-default" aria-label="Left Align" >
+                        <a type="button" class="btn btn-default" aria-label="Left Align" href="<?= site_url() ?>/preciosUnitarios/presupuestos/deleteProduct/<?= $p['idPresupuesto']?>/<?= $p['idPreciosUnitarios']?>">
                             <span class='glyphicon glyphicon-remove' aria-hidden='true'></span>
                         </a>
                     </td>
                 </tr>
-                <h3>Total: <?php echo $total = $total + ($p['cantidad'] * $p['precio_unitario'])  ?></h3> 
+                <h3><?php $total = $total + ($p['cantidad'] * $p['precio_unitario'])  ?></h3> 
         <?php endforeach;  
         } ?>
         
     </tbody>
 </table>
-
+<h3>TOTAL: <?php echo $total ?></h3> 
 <hr> <!-- Botones -->
 <div align="right">
     <button type="button" class="btn btn-danger">Regresar</button>
-    <a type="button" class="btn btn-primary" href="<?php echo site_url("preciosUnitarios/presupuestos/agregarProducto"); ?>">Agregar Producto</a>
+    <a type="button" class="btn btn-primary" href="<?= site_url() ?>/preciosUnitarios/presupuestos/agregarProducto/<?= $p['idPresupuesto'] ?>"> Agregar Producto </a>
 </div>
