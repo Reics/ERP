@@ -7,14 +7,14 @@
                     <label class="col-md-3 control-label" style="width: 100px;" for="idPreciosUnitarios">Producto</label>
                     <select class="form-control" name="idPreciosUnitarios" id="idPreciosUnitarios">
                         <?php
-                        if ($producto != NULL) {
+                         if ($producto != NULL) {
                             foreach ($producto as $p):
                                 ?>
                                 <option value="<?php echo $p['idPreciosUnitarios']; ?>"><?php echo $p['nombre']; ?></option>
                                 <?php
                             endforeach;
                         }
-                        ?>
+                        ?> 
                     </select>
                 </div>
                 <div class="col-md-3">
@@ -36,7 +36,7 @@
                 </div>
                 <div class="col-md-3">
                     <label cclass="col-md-3 control-label" style="width: 140px;" for="importe">Importe</label>
-                    <input id="importe" name="importe" type="text" placeholder="$0.00" class="form-control input-md">
+                    <input  type="text" placeholder="$0.00" class="form-control input-md">
                 </div>
             </div>
 

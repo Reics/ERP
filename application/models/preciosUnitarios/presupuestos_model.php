@@ -51,5 +51,24 @@ class Presupuestos_Model extends CI_Model {
     public function setProducto($data) {
         $this->db->insert('detalle_presupuesto', $data);
     }
+    public function deleteProduct($id, $id2){
+        $this->db->where('idPresupuesto', $id);
+        $this->db->where('idPreciosUnitarios', $id2);
+        $this->db->delete('detalle_presupuesto');
+    }
+    public function updateProduct($id){
+        $this->db->where('idPresupuesto', $data["idPresupuesto"]);
+        $this->db->update('detalle_presupuesto', $data);
+    }
+    public function getproduct_by_id($id, $id2) {
+        $this->db->select("*");
+        $this->db->from("detalle_presupuesto");
+        $this->db->where('idPresupuesto', $id);
+        $this->db->where('idPreciosUnitarios', $id2);
+        $query = $this->db->get();
+        return ($query->num_rows() > 0) ? $query->row_array() : NULL;
+    }
 }
+
+
 

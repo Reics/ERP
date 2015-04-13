@@ -23,10 +23,10 @@
                     <td><?php echo $p['cantidad'] * $p['precio_unitario']; ?></td>
                     <td>
                         
-                        <a type="button" class="btn btn-default" aria-label="Left Align" >
+                        <a type="button" class="btn btn-default" aria-label="Left Align" href="<?= site_url() ?>/preciosUnitarios/presupuestos/update_productform/<?= $p['idPresupuesto']?>/<?= $p['idPreciosUnitarios']?>">
                             <span class='glyphicon glyphicon-edit' aria-hidden='true'></span>
                         </a>
-                        <a type="button" class="btn btn-default" aria-label="Left Align" >
+                        <a type="button" class="btn btn-default" aria-label="Left Align" href="<?= site_url() ?>/preciosUnitarios/presupuestos/deleteProduct/<?= $p['idPresupuesto']?>/<?= $p['idPreciosUnitarios']?>">
                             <span class='glyphicon glyphicon-remove' aria-hidden='true'></span>
                         </a>
                     </td>
