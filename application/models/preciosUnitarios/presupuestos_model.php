@@ -34,7 +34,7 @@ class Presupuestos_Model extends CI_Model {
     }
 
     public function get_product($id) {
-        $this->db->select("preciosunitarios.nombre, detalle_presupuesto.cantidad, detalle_presupuesto.precio_unitario");
+        $this->db->select("*");
         $this->db->from("detalle_presupuesto");
         $this->db->join("preciosunitarios", "preciosunitarios.idPreciosUnitarios = detalle_presupuesto.idPreciosUnitarios", "inner");
         $this->db->where("idpresupuesto", $id);
@@ -44,6 +44,12 @@ class Presupuestos_Model extends CI_Model {
         //$query = $this->db->get_where('detalle_presupuesto', array('idPresupuesto'=>$id));
         return ($query->num_rows() > 0) ? $query->result_array() : NULL;
     }
-
+    public function get_products(){
+        $query = $this->db->get('preciosunitarios');
+        return ($query->num_rows() > 0) ? $query->result_array() : NULL;
+    }
+    public function setProducto($data) {
+        $this->db->insert('detalle_presupuesto', $data);
+    }
 }
 
