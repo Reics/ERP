@@ -42,5 +42,5 @@
 <hr> <!-- Botones -->
 <div align="right">
     <button type="button" class="btn btn-danger">Regresar</button>
-    <a type="button" class="btn btn-primary" >Agregar Producto</a>
+    <a type="button" class="btn btn-primary" href="<?php echo site_url("preciosUnitarios/presupuestos/agregarProducto"); ?>">Agregar Producto</a>
 </div>

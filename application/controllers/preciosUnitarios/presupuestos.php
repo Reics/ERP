@@ -133,8 +133,8 @@ class Presupuestos extends CI_Controller {
 
     public function setProducto() {
         $data = $this->input->post();
-        $this->presupuestos_model->set($data);
-        redirect('preciosUnitarios/presupuestos');
+        $this->presupuestos_model->setProducto($data);
+        redirect('preciosUnitarios/presupuestos/presupuestoProductos');
     }
 
 }
