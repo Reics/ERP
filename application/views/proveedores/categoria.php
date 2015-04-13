@@ -3,14 +3,11 @@
 	<div class="col-md-8">
     </div>
     
-    <div class="col-md-2">
-    	<input id="Search" name="Search" type="text" placeholder="Search..." class="form-control input-md" style="margin-top:20px;">
-    </div> 
 
 	<legend style="margin-top:20px; padding-top: 50px;" align="center">Categorías</legend>
 	
-	<div aling="center">
-		<table class="table" style="margin-top: 30px; width: 500px; margin-left: 400px;">
+	<div aling="left">
+		<table class="table" align="left" style="margin-top: 30px; width: 500px; margin-left: 400px;">
         		
        		<tr>
        			<th style="center">Materiales de construccion (arena, tabique, combras, etc)</th>
@@ -34,5 +31,11 @@
 
 		</table>
 	</div>	
+
+	<br>
+                    <br>
+                    <div style="float:center;" class="col-sm-offset-8 col-sm-10">
+                                        <a role="button" class="btn btn-success" href="<?=site_url()?>/menu/proveedores">Ir a página principal de Proveedores</a>
+                </div>
 
 </section>

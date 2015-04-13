@@ -2,7 +2,7 @@
 
 class MY_Profiler extends CI_Profiler {
 
- 	function MY_Profiler()
+ 	function __construct()
  	{
  	    parent::__construct();
  	}

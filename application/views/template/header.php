@@ -1,6 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+       <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0-rc2/js/bootstrap.min.js"></script>
+    <script src="jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="/path/to/jquery-latest.js"></script> 
+<script type="text/javascript" src="/path/to/jquery.tablesorter.js"></script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0-rc2/css/bootstrap.css" rel="stylesheet" media="screen">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <style>
+        #map-canvas {
+            width: 600px;
+            height: 400px;
+            background-color: #CCC;
+        }
+    </style>
+<link rel="stylesheet" href="/path/to/theme.default.css">
+<!-- load jQuery and tablesorter scripts -->
+<script type="text/javascript" src="/path/to/jquery-latest.js"></script>
+<script type="text/javascript" src="/path/to/jquery.tablesorter.js"></script>
+
+<!-- tablesorter widgets (optional) -->
+
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+            function initialize() {
+                
+                var mapCanvas = document.getElementById('map-canvas');
+                var mapOptions = {
+                    center: new google.maps.LatLng(44.5403, -78.5463),
+                    zoom: 8,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                }
+                var map = new google.maps.Map(mapCanvas, mapOptions)
+            }
+            google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -35,7 +76,7 @@
     <ul class="nav nav-pills nav-justified">
       <li role="presentation" class="<?php echo $header['profecionistas'];?>"><a href="<?php echo site_url("welcome");?>">Profesionistas</a></li>
       <li role="presentation" class="<?php echo $header['proveedores'];?>"><a href="<?php echo site_url("menu/proveedores");?>">Proveedores</a></li>
-      <li role="presentation" class="<?php echo $header['presupuestos'];?>"><a href="<?php echo site_url("menu/preciosUnitarios");?>">Presupuestos</a></li>
+      <li role="presentation" class="<?php echo $header['presupuestos'];?>"><a href="<?php echo site_url("menu/preciosUnitarios");?>">Precios Unitarios</a></li>
     </ul>
   </td>
 </table>

@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-    <body>
+
         
         <h2>Agregar Producto a Presupuesto </h2><hr>
-        
 
 <table class="table table-striped" id="dataTable">
     <thead>    
@@ -51,5 +44,3 @@ and open the template in the editor.
     <button type="button" class="btn btn-danger">Regresar</button>
     <a type="button" class="btn btn-primary" >Agregar Producto</a>
 </div>
-    </body>
-</html>

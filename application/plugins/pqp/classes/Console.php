@@ -83,7 +83,7 @@ class Console {
 	     SET DEFAULTS & RETURN LOGS
 	------------------------------------*/
 	
-	public function getLogs() {
+	public static function getLogs() {
 		return $GLOBALS['debugger_logs'];
 	}
 }
