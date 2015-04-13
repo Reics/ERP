@@ -1,4 +1,6 @@
 
+        
+        <legend style="margin-top:20px;">Productos del presupuesto</legend>
 <table class="table table-striped" id="dataTable">
     <thead>    
         <tr>
@@ -10,11 +12,12 @@
         </tr>
     </thead>
     <tbody>        
-        
+        <?php $total = 0 ?>
         <?php if ($presupuesto != NULL) {
             foreach ($presupuesto as $p): ?>
+        
                 <tr>
-                    <td><?php echo $p['idPreciosUnitarios']; ?></td>
+                    <td><?php echo $p['nombre']; ?></td>
                     <td><?php echo $p['cantidad']; ?></td>
                     <td><?php echo $p['precio_unitario']; ?></td>
                     <td><?php echo $p['cantidad'] * $p['precio_unitario']; ?></td>
@@ -28,6 +31,7 @@
                         </a>
                     </td>
                 </tr>
+                <h3>Total: <?php echo $total = $total + ($p['cantidad'] * $p['precio_unitario'])  ?></h3> 
         <?php endforeach;  
         } ?>
         
@@ -36,7 +40,6 @@
 
 <hr> <!-- Botones -->
 <div align="right">
-    <h3>Total</h3>
     <button type="button" class="btn btn-danger">Regresar</button>
-    <a type="button" class="btn btn-primary" >Agregar Producto</a>
+    <a type="button" class="btn btn-primary" href="<?php echo site_url("preciosUnitarios/presupuestos/agregarProducto"); ?>">Agregar Producto</a>
 </div>
