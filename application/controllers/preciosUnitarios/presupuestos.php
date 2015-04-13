@@ -10,7 +10,6 @@ class Presupuestos extends CI_Controller {
         $this->load->helper('url');
         $this->load->model('preciosUnitarios/presupuestos_model');
         $this->load->model('preciosUnitarios/productos_model');
-        $this->output->enable_profiler(TRUE);
     }
 
     public function index() {
