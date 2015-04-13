@@ -4,14 +4,9 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
     <body>
         
-        <h2></h2><hr>
+        <h2>Agregar Producto a Presupuesto </h2><hr>
         
 
 <table class="table table-striped" id="dataTable">
@@ -25,11 +20,12 @@ and open the template in the editor.
         </tr>
     </thead>
     <tbody>        
-        
+        <?php $total = 0 ?>
         <?php if ($presupuesto != NULL) {
             foreach ($presupuesto as $p): ?>
+        
                 <tr>
-                    <td><?php echo $p['idPreciosUnitarios']; ?></td>
+                    <td><?php echo $p['nombre']; ?></td>
                     <td><?php echo $p['cantidad']; ?></td>
                     <td><?php echo $p['precio_unitario']; ?></td>
                     <td><?php echo $p['cantidad'] * $p['precio_unitario']; ?></td>
@@ -43,6 +39,7 @@ and open the template in the editor.
                         </a>
                     </td>
                 </tr>
+                <h3>Total: <?php echo $total = $total + ($p['cantidad'] * $p['precio_unitario'])  ?></h3> 
         <?php endforeach;  
         } ?>
         
@@ -51,7 +48,6 @@ and open the template in the editor.
 
 <hr> <!-- Botones -->
 <div align="right">
-    <h3>Total</h3>
     <button type="button" class="btn btn-danger">Regresar</button>
     <a type="button" class="btn btn-primary" >Agregar Producto</a>
 </div>
