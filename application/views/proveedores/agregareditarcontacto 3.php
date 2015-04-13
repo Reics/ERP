@@ -8,6 +8,14 @@
   <table style="margin-left: 50px; margin left:30px">
     
     <?php foreach ($proovedores as $e): ?>
+    <tr>
+                
+                    <div class="form-group">
+                        <td><label for="ncontacto">Código del Contacto: </label></td>
+                        <td><input type="text" class="form-control" class="form-control" readonly="readonly" name="idContacto" value="<?php echo $e['idContacto']; ?>">                       
+                        </td>
+                    </div>
+            </tr>
             <tr>
                 
                     <div class="form-group">

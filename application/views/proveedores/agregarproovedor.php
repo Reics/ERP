@@ -6,9 +6,13 @@
   <div class="form-group">
     
   <table style="margin-left: 50px; margin left:30px">
-    
+    <tr>
+        <div class="form-group">
+                        <td><label for="ncontacto">Código de Proovedor: </label></td>
+                        <td><input type="text" readonly="readonly" class="form-control" class="form-control" name="idProovedor" value="<?php echo $c['idProovedor']?>"></td>
+                    </div>
+    </tr>
             <tr>
-                
                     <div class="form-group">
                         <td><label for="ncontacto">Nombre del Proovedor: </label></td>
                         <td><input type="text" class="form-control" class="form-control" name="Nombre" value="<?php echo $c['Nombre']?>"></td>
@@ -66,7 +70,7 @@
  <tr><div class="form-group">
                 <td><label for="Categoria">Categoría</label></td>
     <td><select id="Categoria" name="Categoria" class="form-control">
-        <option value="">Seleciona una opción</option>
+        <option value="<?=$c['Categoria']?>"><?=$c['Categoria']?></option>
         <option value="Materiales de construccion (arena, tabique, combras, etc)"> Materiales de construccion (arena, tabique, combras, etc)</option>
         <option value="Muros,celosias,recubrimientos,pisos y plafones">Muros,celosias,recubrimientos,pisos y plafones</option>
         <option value="Maquinaria, equipo y herramientas">Maquinaria, equipo y herramientas</option>

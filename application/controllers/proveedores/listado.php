@@ -155,11 +155,18 @@ class Listado extends CI_Controller {
 	public function update($id){
 		$data = $this->input->post();
 		$nombre = $this->input->post("Nombre");
+		$contacto = $this->input->post("idContacto");
 
 		$this->load->model('procon');
 		$df = $this->procon->checarupdatec($nombre);
+		$dr = $this->procon->checarupdateidc($contacto,$nombre);
 
-		if($df == null){
+		if($dr != null){
+			$this->load->model('proovedores');
+		$this->proovedores->update_contacto($data,$id);
+		redirect('proveedores/listado/');
+		}
+		else if($df == null){
 		$this->load->model('proovedores');
 		$this->proovedores->update_contacto($data,$id);
 		redirect('proveedores/listado/');
@@ -207,13 +214,21 @@ class Listado extends CI_Controller {
 
 	public function update_proveedor($id){
 		$nombre = $this->input->post('Nombre');
+		$proovedor = $this->input->post('idProovedor');
 		$data = $this->input->post();
 
 		
 		$this->load->model('procon');
 		$df = $this->procon->checarupdate($nombre);
+		$dr = $this->procon->checarupdateid($proovedor,$nombre);
 
-		if($df == null){
+		if($dr != null){
+			$this->load->model('proovedores');
+		$this->proovedores->update_proveedor($data,$id);
+		redirect('proveedores/listado');
+		}
+
+		else if($df == null){
 			$this->load->model('proovedores');
 		$this->proovedores->update_proveedor($data,$id);
 		redirect('proveedores/listado');

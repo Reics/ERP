@@ -60,12 +60,20 @@ class borrarcontacto extends CI_Controller {
 
 	public function update($id){
 		$data = $this->input->post();
+		$contacto = $this->input->post('idContacto');
 		$nombre = $this->input->post('Nombre');
 
 		$this->load->model('procon');
 		$df = $this->procon->checarupdatec($nombre);
+		$dr = $this->procon->checarupdateidc($contacto,$nombre);
 
-		if($df == null){
+		if($dr != null){
+			$this->load->model('contactos');
+		$this->contactos->update_contacto($data,$id);
+		redirect('proveedores/borrarcontacto');
+		}
+
+		else if($df == null){
 			$this->load->model('contactos');
 		$this->contactos->update_contacto($data,$id);
 		redirect('proveedores/borrarcontacto');
