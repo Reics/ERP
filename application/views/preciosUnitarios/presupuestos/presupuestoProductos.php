@@ -1,7 +1,6 @@
 
         
-        <h2>Agregar Producto a Presupuesto </h2><hr>
-
+        <legend style="margin-top:20px;">Agregar producto a presupuesto</legend>
 <table class="table table-striped" id="dataTable">
     <thead>    
         <tr>
