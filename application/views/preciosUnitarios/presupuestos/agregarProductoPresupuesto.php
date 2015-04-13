@@ -11,7 +11,7 @@
             <select class="form-control" name="idPreciosUnitarios" id="idPreciosUnitarios">
             <?php if ($producto != NULL) {
             foreach ($producto  as $p): ?>
-            <option value="<?php echo $p['idPreciosUnitarios']; ?>"><?php echo $p['idPreciosUnitarios']; ?></option>
+            <option value="<?php echo $p['idPreciosUnitarios']; ?>"><?php echo $p['nombre']; ?></option>
         <?php endforeach;  
         } ?>
             </select>
@@ -30,12 +30,12 @@
     </div>
 	<div class="row">
         <div class="col-md-3">
-            <label class="col-md-3 control-label" style="width: 130px;" for="precio_unitario">Precio Unitario</label>  
-    	    <input id="precio_unitario" name="precio_unitario" type="text" placeholder="$0.00" class="form-control input-md">
+            <label class="col-md-3 control-label" style="width: 130px;" for="precio_unitario">Precio Unitario</label>   
+    	    <input id="precio_unitario" name="precio_unitario" type="text" placeholder="$0.00" class="form-control input-md" disabled>
         </div>
         <div class="col-md-3">
             <label cclass="col-md-3 control-label" style="width: 140px;" for="importe">Importe</label>
-            <input id="importe" name="importe" type="text" placeholder="$0.00" class="form-control input-md">
+            <input id="importe" name="importe" type="text" placeholder="$0.00" class="form-control input-md" disabled>
         </div>
     </div>
 
